@@ -20,7 +20,7 @@ body, html {
 
 }
 .bgimg-1 {
-  background-image: url("{% static 'hermitage_background.jpg' %}");
+  background-image: url("{% static 'state-hermitage-museum-russian-federation.jpg' %}");
   min-height: 100%;
 }
 
@@ -48,6 +48,19 @@ h3 {
   color: #111;
 }
 
+.bg {
+    /* The image used */
+    background-image: url("{% static 'hermitage_background.jpg' %}");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -69,10 +82,6 @@ h3 {
 <p>Залы Большого Эрмитажа</p>
 </div>
 
-<div class="bgimg-1">
-<div class="caption">
-</div>
-</div>
 <div style="position:relative;">
     <div style="color:#ddd;background-color:#282E34;text-align:left;padding:50px 80px;text-align: start;">
     <p>2023</p>
