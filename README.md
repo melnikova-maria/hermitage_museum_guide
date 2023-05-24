@@ -1,11 +1,11 @@
-# Hermitage Museum Online Guide
+# HERMITAGE MUSEUM ONLINE GUIDE
 
 ## How to run
 
-1. clone repository
-2. in project directory execute:
+1. Clone repository.
+2. In project directory execute:
 ```
-    _python manage.py collectstatic_
-    _python manage.py runserver_
+    >_ python manage.py collectstatic
+    >_ python manage.py runserver
 ```
-
+3. Open http://127.0.0.1:8000/rooms in your browser.
