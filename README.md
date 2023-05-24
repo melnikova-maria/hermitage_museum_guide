@@ -5,6 +5,7 @@
 1. Clone repository.
 2. In project directory execute:
 ```
+    >_ pip install whitenoise
     >_ python manage.py collectstatic
     >_ python manage.py runserver
 ```
