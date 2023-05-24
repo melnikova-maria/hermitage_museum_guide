@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3ih=)grhxdyhw#k0=il$krfv5l9_8h^6^-*j_!b4$68w3%k-ud'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'hermitage_guide.urls'
@@ -116,10 +117,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+STATIC_ROOT = BASE_DIR / 'production_files' # directory to collect static files into
+
+# the search of static files starts in the derectories listed in STATICFILES_DIR
+# and then, if the file was not found, the search continues in the static folder (named in STATIC_URL)
+# of each app
+
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'rooms/static/media'
+    # BASE_DIR / 'rooms/static/media',
+    BASE_DIR / 'static_global'
 ]
 
 # Default primary key field type
