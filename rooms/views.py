@@ -5,5 +5,5 @@ from django.template import loader
 # Create your views here.
 
 def rooms(request):
-    template = loader.get_template('about.html')
+    template = loader.get_template('contacts.html')
     return HttpResponse(template.render())
