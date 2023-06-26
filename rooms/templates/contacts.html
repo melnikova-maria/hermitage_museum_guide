@@ -1,77 +1,106 @@
-<!-- РАБОТАЮЩАЯ -->
+<!-- конченый вариант, но неработающая карта -->
 {% load static %}
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Main</title>
+        
+        <title>Contacts</title>
         <style>
             *
                 {
-                    padding: 0px;
-                    margin: 0px;
                     box-sizing: border-box;
                 }
             
             body
                 {
+                    padding: 0px;
+                    margin: 0px;
                     overflow: hidden;
-                    background-color: #151515;
-                }
-            
-            .intro
-                {
-                    position: relative;
-                    max-height: 100%;
+                    filter: brightness(100%);
+                    
                 }
 
-/***************  видео  ***************/
-            .intro_video
-                {
-                    position: relative;
+            section
+                {   
                     display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    filter: brightness(70%);
+                    width: 100%;
                     height: 100%;
-                    animation: video 3s 1;
+                    position: relative;
+                    z-index: -10;
                 }
 
-/***************  заголовок и линия  ***************/
-            .intro_title 
+/***************  основа  ***************/
+            .container
                 {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    align-items: center;
-                    width: 100%;
+                    align-items: start;
+                    width: 50%;
                     height: 100%;
+                    padding-left: 8%;
+                    z-index: 2;
+                    background-color: #f1f6fa;
+                    animation: body 4s 1;
+                }
+
+            .frame_up
+                {
+                    width: 100%;
+                    height: 12%;
                     top: 0px;
+                    background-color: #f1f6fa;
+                    z-index: 1;
                     position: absolute;
+                    animation: body 4s 1;
+                }
+
+            .frame_down
+                {
+                    width: 100%;
+                    height: 10%;
+                    bottom: 0px;
+                    background-color: #f1f6fa;
+                    z-index: 1;
+                    position: absolute;
+                    animation: body 4s 1;
+                }
+
+            .frame_right
+                {
+                    width: 7%;
+                    height: 100%;
+                    right: 0px;
+                    background-color: #f1f6fa;
+                    z-index: 0;
+                    position: absolute;
+                    animation: body 4s 1;
+                }
+
+/***************  заголовок  ***************/  
+            .intro_title 
+                {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    width: 100%;
+                    height: 60%;
+                    top: 0px;
+                    margin-left: 8%;
+                    z-index: 201;
                 }
 
             .title
                 {
                     padding-bottom: 10px;
                     margin: 0;
-                    color: white;
+                    color: #151515;
                     opacity: 100%;
                     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                     font-size: 60px;
-                    text-align: center;
                     animation: text 5s 1;
-                }
-
-            .line
-                {   
-                    width: 0px;
-                    border-bottom: 3px solid white;
-                    
-                    -webkit-animation: title 5s;
-                    -moz-animation:    title 5s; 
-                    -o-animation:      title 5s; 
-                    animation:         title 5s; 
-                    animation-fill-mode: forwards;
                 }
 
 /***************  верхняя панель  ***************/
@@ -84,7 +113,9 @@
                     width: 100%;
                     height: 9%;
                     top: 0px;
-                    position: absolute;
+                    position: fixed;
+                    z-index: 100;
+                    transition: top 0.6s;
                 }
 
 /***************  регистрация  ***************/
@@ -104,7 +135,7 @@
 
             .login
                 {
-                    color: white;
+                    color: #151515;
                     opacity: 100%;
                     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                     font-size: 25px;
@@ -112,14 +143,14 @@
                     animation: text 5s 1;
                 }
 
-            .intro_login:before 
+            .intro_login:before
                 {
                     content: '';
                     position: absolute;
                     right: 20%;
                     left: 20%;
                     bottom: 23px;
-                    border-bottom: 2px solid white;
+                    border-bottom: 2px solid #151515;
                     transition: 1s;
                     transform: scaleX(0);
                 }
@@ -161,11 +192,10 @@
             .intro_navigation ul li a
                 {
                     text-decoration: none;
-                    color: white;
+                    color: #151515;
                     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                     font-size: 25px;
                     letter-spacing: 1.5px;
-                    text-align: center;
                     animation: text 5s 1;
                 }
 
@@ -176,7 +206,7 @@
                     right: 15%;
                     left: 15%;
                     bottom: -5px;
-                    border-bottom: 2px solid white;
+                    border-bottom: 2px solid #151515;
                     transition: 1s;
                     transform: scaleX(0);
                 }
@@ -214,17 +244,17 @@
                     height: 45px;
                     border-style: none;
                     outline: none;
-                    color: white;
+                    color: #151515;
                     font-size: 20px;
                     background-color: rgba(255, 255, 255, 0);
                     transition: all .5s ease-in-out;
-                    border-bottom: 2px solid white;
+                    border-bottom: 2px solid #151515;
                     animation: search 6s 1;
                 }
 
             .input_search::placeholder
                 {
-                    color: white;
+                    color: var(--color_border);
                     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                     font-size: 20px;
                     font-weight: 50;
@@ -241,7 +271,7 @@
                     border-radius: 50%;
                     cursor: pointer;
                     pointer-events: painted;
-                    color: white;
+                    color: #151515;
                     opacity: 100%;
                     font-size: 16px;
                     font-weight: bold;
@@ -256,7 +286,7 @@
                     width: 200px;
                     border-radius: 0px;
                     background-color: transparent;
-                    border-bottom: 2px solid white;
+                    border-bottom: 2px solid #151515;
                 }
 
             .input_search:focus
@@ -264,8 +294,39 @@
                     width: 200px;
                     border-radius: 0px;
                     background-color: transparent;
-                    border-bottom: 1px solid white;
+                    border-bottom: 2px solid #151515;
                 }
+
+/***************  содержание  ***************/  
+            .intro_contacts
+                {
+                    /* padding: 3rem; */
+                    display: grid;
+                    grid-template-columns: 33% 33% 34%;
+                    justify-content: start;
+                    align-items: start;
+                    width: 95%;
+                    height: 20%;
+                    /* margin-bottom: 5%; */
+                }
+
+            .title_contacts
+                {
+                    padding-right: 30px;
+                    color: #151515;
+                    opacity: 100%;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-size: 25px;
+                    animation: text 5s 1;
+                    letter-spacing: 1.2;
+                }
+
+            .title_contacts p
+                {
+                    font-weight: lighter;
+                    font-size: 22px;
+                }
+
 
 /***************  анимация  ***************/
             @keyframes text
@@ -276,11 +337,11 @@
                         }
                 }
 
-            @keyframes video
+            @keyframes body
                 {
                     0%
                         {
-                            filter: brightness(0%);
+                            background-color: white;
                         }
                 }
 
@@ -288,7 +349,7 @@
                 {
                     100%
                         {
-                            width: 550px;
+                            width: 100%;
                         }
                 }
 
@@ -299,30 +360,26 @@
                             opacity: 0%;
                         }
                 }
-            
+
+
+/***************  изменение масштаба  ***************/
+            @media (max-width: 830px)
+                {
+
+                }
+
+        .map
+        {
+            height: 200%;
+            width: 200%;
+        }
         </style>
     </head>
 
     <body>
-
-        <div class = "intro">
-
-            <!-- видео -->
-            <div class = "intro_video">
-                <video src = "{% static 'rooms/media/film.mp4' %}" autoplay muted loop></video>
-            </div>
-
-            <!-- заголовок и линия -->
-            <div class = "intro_title">
-                <span class = "title">
-                    HERMITAGE MUSEUM GUIDE
-                </span>
-
-                <div class = "line"></div>
-            </div>
-
+        <div class = "frame_up">
             <div class = "intro_bar">
-
+    
                 <!-- регистрация -->
                 <div class = "intro_login">
                     <span class = "login">
@@ -348,15 +405,51 @@
                         <input class = "input_search" placeholder = " Type to search...">
                     </div>
                 </div>
-
+            </div>
+        </div>
+        <div class = "frame_right"></div>
+        <section>
+            <div class = "intro_title">
+                <span class = "title">
+                    CONTACTS
+                </span>
             </div>
 
-        </div>
+
+            <div class = "container">
+                <div class = "intro_contacts">
+                    <span class = "title_contacts">
+                        WHERE WE STAND
+
+                        <p>
+                            The State Hermitage Museum, Russia, 190000, St. Petersburg, Dvortsovaya Embankment, 34
+                        </p>
+                    </span>
+
+                    <span class = "title_contacts">
+                        WHEN WE ARE OPEN
+                        <p>
+                            Monday – Saturday: 10am-7pm
+                        </p>
+                        <p>
+                            Sunday: 12pm-6pm
+                        </p>
+                    </span>
+
+                    <span class = "title_contacts">
+                        HOW TO CONTACT US
+                        <p>
+                            Phone number: +7(812)710-90-79
+                        </p>
+                        <p>
+                            Email: chancery@hermitage.ru
+                        </p>
+                    </span>
+                </div>
+            </div>
+
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Tzf5s6EZ96kGP213QVNGjMTL4gashLI&ehbc=2E312F" width = 43% height = 100% style = "border:0;" position = "absolute"></iframe>
+        </section>
+        <div class = "frame_down"></div>
+        
     </body>
-</html>
-
-
-
-
-
-
