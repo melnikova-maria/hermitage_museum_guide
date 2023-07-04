@@ -44,6 +44,10 @@ window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
     let sectionY = section.getBoundingClientRect();
 
+    console.log("scroll", scroll)
+    console.log("section_height", section_height)
+    console.log("sectionY.top", sectionY.top)
+
 //--------WINTER PALACE--------//
     if (scroll <= 968)
         {
@@ -151,7 +155,6 @@ window.addEventListener('scroll', () => {
     title_old_hermitage.style.opacity = (scroll - 1936) / (sectionY.top + section_height + 1936);
     text_old_hermitage.style.opacity = (scroll - 1936) / (sectionY.top + section_height + 1936);
     image_old.style.opacity = (scroll - 1936) / (sectionY.top + section_height + 1936);
-
 
     title.style.opacity = - scroll / (intro_height / 4) + 1;
     shadow.style.height = `${scroll * 0.5 + 330}px`;

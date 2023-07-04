@@ -5,5 +5,5 @@ from django.template import loader
 # Create your views here.
 
 def rooms(request):
-    template = loader.get_template('winter_palace.html')
+    template = loader.get_template('login.html')
     return HttpResponse(template.render())
