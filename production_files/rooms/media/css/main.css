@@ -26,7 +26,7 @@ body
         flex-direction: row;
         justify-content: center;
         filter: brightness(70%);
-        height: 100%;
+        width: 100%;
         animation: video 3s 1;
     }
 
@@ -103,13 +103,22 @@ body
         animation: text 5s 1;
     }
 
+.login a
+    {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 25px;
+        letter-spacing: 1.5px;
+        animation: text 5s 1;
+    }
+
 .intro_login:before 
     {
         content: '';
         position: absolute;
         right: 20%;
         left: 20%;
-        bottom: 23px;
+        bottom: 19px;
         border-bottom: 2px solid #ffffff;
         transition: 1s;
         transform: scaleX(0);

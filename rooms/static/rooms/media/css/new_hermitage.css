@@ -170,13 +170,22 @@ body
         animation: text 5s 1;
     }
 
+.login a
+    {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 25px;
+        letter-spacing: 1.5px;
+        animation: text 5s 1;
+    }
+
 .intro_login:before 
     {
         content: '';
         position: absolute;
         right: 20%;
         left: 20%;
-        bottom: 23px;
+        bottom: 19px;
         border-bottom: 2px solid #ffffff;
         transition: 1s;
         transform: scaleX(0);
@@ -401,8 +410,8 @@ section
 .grey_for_img_card_1, .grey_for_img_card_2, .grey_for_img_card_3
     {
         position: absolute;
-        width: 518px;
-        height: 875px;
+        width: 520px;
+        height: 878px;
         top: 0px;
         background-color: #151515;
         opacity: 0;
@@ -411,7 +420,7 @@ section
 
 .grey_for_img_card_2
     {
-        width: 518px;
+        width: 520px;
         height: 778px;
     }
 
@@ -508,8 +517,8 @@ section
 
 .grey_for_img_card_3
     {
-        width: 677px;
-        height: 446px;
+        width: 680px;
+        height: 450px;
     }
 
 .grey_for_text_card_3

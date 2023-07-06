@@ -100,11 +100,11 @@ window.addEventListener('scroll', () => {
     shadow.style.height = `${scroll * 0.5 + 200}px`;
 
     // затемнение (то есть появление) элементов при прокрутке
-    card_1.style.opacity = scroll / (sectionY.top + section_height);
-    card_4.style.opacity = scroll / (sectionY.top + section_height);
+    card_1.style.opacity = (scroll + 200) / (sectionY.top + section_height);
+    card_4.style.opacity = (scroll + 200) / (sectionY.top + section_height);
 
-    card_2.style.opacity = (scroll - 1000) / (sectionY.top + section_height + 1193);
-    card_3.style.opacity = (scroll - 1000) / (sectionY.top + section_height + 1193);
+    card_2.style.opacity = (scroll - 500) / (sectionY.top + section_height + 1193);
+    card_3.style.opacity = (scroll - 500) / (sectionY.top + section_height + 1193);
 
 
     // появление стрелочек в зависимости от значения скролла
