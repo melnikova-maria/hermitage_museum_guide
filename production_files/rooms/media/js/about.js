@@ -44,6 +44,8 @@ window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
     let sectionY = section.getBoundingClientRect();
 
+    console.log("scroll", scroll)
+
 //--------WINTER PALACE--------//
     if (scroll <= 968)
         {
@@ -55,14 +57,14 @@ window.addEventListener('scroll', () => {
         }
 
     // вертикальная линия WINTER PALACE двигается вниз
-    if (scroll >= 968 && scroll <= 1688)
+    if (scroll >= 968 && scroll <= 1666)
         {
             line_ver.style.height = `${(scroll - 968) / (sectionY.top + section_height) * 100}%`;
             line_ver.style.backgroundColor = "#c4c4c4"; //светлый
         }
 
 //--------NEW HERMITAGE--------//
-    if (scroll >= 968 && scroll <= 1937)
+    if (scroll >= 968 && scroll <= 1938)
         {
             title_new_hermitage.style.transform = `translateY(${(scroll - 968) / (section_height + sectionY.top + 968) * 170 - 170}px)`; // надпись NEW HERMITAGE двигается вниз
             text_new_hermitage.style.transform = `translateY(${(scroll - 968) / (section_height + sectionY.top + 968) * -170 + 170}px)`; // текст NEW HERMITAGE двигается вверх
@@ -72,7 +74,7 @@ window.addEventListener('scroll', () => {
         }
 
     // вертикальная линия NEW HERMITAGE двигается вниз
-    if (scroll <= 2632)
+    if (scroll >= 1938 && scroll <= 2632)
         {
             line_ver_new.style.height = `${(scroll - 1936) / (sectionY.top + section_height + 968) * 100}%`;
             line_ver_new.style.backgroundColor = "#c4c4c4";
@@ -89,7 +91,7 @@ window.addEventListener('scroll', () => {
         }
 
     // вертикальная линия OLD HERMITAGE двигается вниз
-    if (scroll >= 2904 && scroll <= 3572)
+    if (scroll >= 2904 && scroll <= 3546)
         {
             line_ver_old.style.height = `${(scroll - 2904) / (sectionY.top + section_height + 1936) * 100}%`;
             line_ver_old.style.backgroundColor = "#c4c4c4";
@@ -98,9 +100,9 @@ window.addEventListener('scroll', () => {
         }
 
     // горизонтальная линия ABOUT US двигается влево
-    if (scroll >= 3572)
+    if (scroll >= 3546)
         {
-            line_comp.style.width = `${(scroll - 3572) / (sectionY.top + section_height + 3572) * 3572}px`;
+            line_comp.style.width = `${(scroll - 3546) / (sectionY.top + section_height + 3546) * 3400}px`;
             line_comp.style.borderBottomColor = "#c4c4c4";
         }
         

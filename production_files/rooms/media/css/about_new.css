@@ -97,6 +97,7 @@ body
         opacity: 100%;
         font-size: 25px;
         letter-spacing: 1.5px;
+        animation: text 5s 1;
     }
 
 .login a
@@ -114,7 +115,7 @@ body
         position: absolute;
         right: 20%;
         left: 20%;
-        bottom: 21px;
+        bottom: 19px;
         border-bottom-width: 2px;
         border-bottom-style: solid;
         border-bottom-color: var(--color_border);

@@ -97,7 +97,6 @@ body
         opacity: 100%;
         font-size: 25px;
         letter-spacing: 1.5px;
-        animation: text 5s 1;
     }
 
 .login a
@@ -115,7 +114,7 @@ body
         position: absolute;
         right: 20%;
         left: 20%;
-        bottom: 19px;
+        bottom: 21px;
         border-bottom-width: 2px;
         border-bottom-style: solid;
         border-bottom-color: var(--color_border);
@@ -344,13 +343,14 @@ section img
         height: 100%;
     }
 
-.title_wrapper
+.container_winter  .title_wrapper
     {
         display: flex;
         justify-content: left;
         align-items: end;
         width: 100%;
         height: 100%;
+        margin-right: 500px;
         padding-bottom: 10px;
     }
 
@@ -388,7 +388,7 @@ section img
 .title_winter_palace, .text_winter_palace, .title_new_hermitage, .text_new_hermitage, .title_old_hermitage, .text_old_hermitage
     {
         color: #ffffff;
-        font-size: 35px; 
+        font-size: 40px; 
         letter-spacing: 2px;
         transform: translateY(-200px);
     }
@@ -397,6 +397,7 @@ section img
     {
         font-size: 22px;
         font-weight: lighter;
+        line-height: 1.3;
         transform: translateY(200px);
     }
 
@@ -414,6 +415,16 @@ section img
         padding-top: 50px;
         margin-left: 10%;
         z-index: -1;
+    }
+
+.container_new .title_and_text_wrapper
+    {
+        display: grid;
+        grid-template-rows: 50% 50%;
+        justify-content: right;
+        align-items: start;
+        width: 100%;
+        height: 100%;
     }
 
 .container_new .title_wrapper
@@ -466,7 +477,7 @@ section img
         position: absolute;
         width: 1px;
         height: 0px;
-        left: 8.2%;
+        left: 8.1%;
         background-color: rgb(196, 196, 196);
         top: 6px;
     }
@@ -474,10 +485,20 @@ section img
 /***************  секция OLD HERMITAGE  ***************/
 .image_old
     {
-        width: 75%;
+        width: 70%;
         margin-right: 3%;
         filter: brightness(80%);
         z-index: -1;
+    }
+
+.container_winter  .title_wrapper_old
+    {
+        display: flex;
+        justify-content: left;
+        align-items: end;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 10px;
     }
 
 .line_hor_old
@@ -525,7 +546,7 @@ section img
 .text_company, .title_company
     {
         color: #ffffff;
-        font-size: 26px;
+        font-size: 28px;
         letter-spacing: 1.5px;
         text-align: center;
         line-height: 1.3;
@@ -533,7 +554,7 @@ section img
 
 .title_company
     {
-        font-size: 45px;
+        font-size: 50px;
         line-height: 2.5;
     }
 

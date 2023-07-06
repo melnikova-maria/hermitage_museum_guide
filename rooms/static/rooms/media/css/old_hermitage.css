@@ -1,4 +1,4 @@
-*
+                *
     {
         padding: 0px;
         margin: 0px;
@@ -167,7 +167,6 @@ body
         opacity: 100%;
         font-size: 25px;
         letter-spacing: 1.5px;
-        animation: text 5s 1;
     }
 
 .login a
@@ -185,7 +184,7 @@ body
         position: absolute;
         right: 20%;
         left: 20%;
-        bottom: 19px;
+        bottom: 21px;
         border-bottom: 2px solid #ffffff;
         transition: 1s;
         transform: scaleX(0);
@@ -394,7 +393,7 @@ section
 .card_3_content
     {
         text-align: right;
-        transform: translateY(233px);
+        transform: translateY(203px);
     }
 
 .card_1_content p, .card_2_content p, .card_3_content p
@@ -434,12 +433,12 @@ section
     {
         position: absolute;
         width: 100%;
-        height: 46%;
+        height: 47%;
         background-color: #151515;
         z-index: 1;
     }
 
-.grey_for_text_card_2, .grey_for_text_card_3
+.grey_for_text_card_2
     {
         height: 28%;
     }

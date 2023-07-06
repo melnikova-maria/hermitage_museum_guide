@@ -100,16 +100,15 @@ body
         opacity: 100%;
         font-size: 25px;
         letter-spacing: 1.5px;
-        animation: text 5s 1;
+        /* animation: text 1s 1; */
     }
 
 .login a
     {
         text-decoration: none;
-        color: #ffffff;
+        color: red;
         font-size: 25px;
         letter-spacing: 1.5px;
-        animation: text 5s 1;
     }
 
 .intro_login:before 
@@ -118,7 +117,7 @@ body
         position: absolute;
         right: 20%;
         left: 20%;
-        bottom: 19px;
+        bottom: 21px;
         border-bottom: 2px solid #ffffff;
         transition: 1s;
         transform: scaleX(0);
