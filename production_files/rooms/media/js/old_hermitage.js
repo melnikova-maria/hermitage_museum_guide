@@ -85,8 +85,6 @@ window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
     let sectionY = section.getBoundingClientRect();
 
-    console.log("scroll", scroll)
-
     card_1.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -180 + 100}px)`; // ваза 1 двигается вверх
     card_3.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -180 + 100}px)`; // ваза 3 двигается вверх
 

@@ -44,10 +44,6 @@ window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
     let sectionY = section.getBoundingClientRect();
 
-    console.log("111")
-    console.log("section_height", section_height)
-    console.log("sectionY.top", sectionY.top)
-
 //--------WINTER PALACE--------//
     if (scroll <= 968)
         {
