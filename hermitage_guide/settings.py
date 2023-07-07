@@ -56,7 +56,8 @@ ROOT_URLCONF = 'hermitage_guide.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'rooms/templates/', ],
+        'DIRS': [BASE_DIR / 'rooms/templates/', 
+                 BASE_DIR / 'auth/templates/',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,3 +135,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# login
+
+LOGIN_REDIRECT_URL = "/"

@@ -320,12 +320,20 @@ body
 
             <div class = "intro_bar">
 
+                {% if user.is_authenticated %}
+                <div class = "intro_login">
+                    <span class = "login">
+                        <a href = "accounts/logout/"> {{user.username}} </a>
+                    </span>                    
+                </div>                
+                {% else %}
                 <!-- регистрация -->
                 <div class = "intro_login">
                     <span class = "login">
                         <a href = "/login"> Login </a>
                     </span>                    
                 </div>
+                {% endif %}
 
                 <!-- навигация -->
                 <div class = "intro_navigation">
