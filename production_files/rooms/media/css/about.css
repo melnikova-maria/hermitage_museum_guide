@@ -1,4 +1,4 @@
-            *
+*
     {
         padding: 0px;
         margin: 0px;
@@ -15,6 +15,18 @@ body
     {
         --arrow_up: 0;
         --arrow_down: 100;
+    }
+
+::-webkit-scrollbar
+    {
+        width: 10px;
+        background-color: #b7b7b74d;
+    }
+
+::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        background-color: #1515156d;
     }
 
 /***************  фон и заголовок  ***************/
@@ -114,7 +126,7 @@ body
         position: absolute;
         right: 20%;
         left: 20%;
-        bottom: 21px;
+        bottom: 20px;
         border-bottom-width: 2px;
         border-bottom-style: solid;
         border-bottom-color: var(--color_border);
@@ -477,7 +489,7 @@ section img
         position: absolute;
         width: 1px;
         height: 0px;
-        left: 8.2%;
+        left: 8.1%;
         background-color: rgb(196, 196, 196);
         top: 6px;
     }

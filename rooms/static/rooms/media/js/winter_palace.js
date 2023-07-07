@@ -75,11 +75,19 @@ const title_soon = document.querySelector(".title_soon")
 const intro = document.querySelector(".intro");
 const shadow = document.querySelector(".shadow");
 
+const container_sec_2 = document.querySelector(".container_sec_2")
+
 
 const arrows = document.getElementById("arrow");
 
 let intro_height = intro.offsetHeight;
 let section_height = section.offsetHeight;
+
+let scrollHeight = Math.max(
+  document.body.scrollHeight, document.documentElement.scrollHeight,
+  document.body.offsetHeight, document.documentElement.offsetHeight,
+  document.body.clientHeight, document.documentElement.clientHeight
+);
 
 
 window.addEventListener('scroll', () => {
@@ -113,12 +121,12 @@ window.addEventListener('scroll', () => {
             arrows.style.setProperty("--arrow_up", "0");
             arrows.style.setProperty("--arrow_down", "100");
         }
-    else if (scroll >= 100 && scroll <= 2100)
+    else if (scroll >= 100 && scroll <= (document.body.scrollHeight - document.body.clientHeight - 50))
         {
             arrows.style.setProperty("--arrow_up", "100");
             arrows.style.setProperty("--arrow_down", "100");            
         }
-    else if (scroll > 2100)
+    else if (scroll >= (document.body.scrollHeight - document.body.clientHeight - 50))
         {
             arrows.style.setProperty("--arrow_up", "100");
             arrows.style.setProperty("--arrow_down", "0");            

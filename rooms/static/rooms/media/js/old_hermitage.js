@@ -103,12 +103,12 @@ window.addEventListener('scroll', () => {
             arrows.style.setProperty("--arrow_up", "0");
             arrows.style.setProperty("--arrow_down", "100");
         }
-    else if (scroll >= 100 && scroll <= 1050)
+    else if (scroll >= 100 && scroll <= (document.body.scrollHeight - document.body.clientHeight - 50))
         {
             arrows.style.setProperty("--arrow_up", "100");
             arrows.style.setProperty("--arrow_down", "100");            
         }
-    else if (scroll > 1050)
+    else if (scroll >= (document.body.scrollHeight - document.body.clientHeight - 50))
         {
             arrows.style.setProperty("--arrow_up", "100");
             arrows.style.setProperty("--arrow_down", "0");            

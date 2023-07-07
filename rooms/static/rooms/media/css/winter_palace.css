@@ -17,6 +17,18 @@ body
         --arrow_down: 100;
     }
 
+::-webkit-scrollbar
+    {
+        width: 10px;
+        background-color: #b7b7b74d;
+    }
+
+::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        background-color: #1515156d;
+    }
+
 /***************  фон и заголовок  ***************/
 .intro
     {
@@ -184,7 +196,7 @@ body
         position: absolute;
         right: 20%;
         left: 20%;
-        bottom: 21px;
+        bottom: 20px;
         border-bottom: 2px solid #ffffff;
         transition: 1s;
         transform: scaleX(0);
@@ -344,7 +356,7 @@ section
         width: 100%;
         bottom: 123%;
         z-index: 2;
-        background: linear-gradient(to top, #151515, #151515d5, #1515158e, #15151500);
+        background: linear-gradient(to top, #151515, #151515f4, #15151578, #15151500);
     }
 
 /***************  секция 1 ***************/
@@ -433,8 +445,8 @@ section
 .white_card_1, .white_card_3
     {
         position: absolute;
-        width: 518px;
-        height: 658px;
+        width: 100%;
+        height: 100%;
         top: 0px;
         background-color: #ffffff;
         opacity: 0;
@@ -444,8 +456,8 @@ section
 .grey_for_img_card_4, .grey_for_img_card_2
     {
         position: absolute;
-        width: 605px;
-        height: 768px;
+        width: 100%;
+        height: 100%;
         top: 0px;
         background-color: #151515;
         opacity: 0;
@@ -539,18 +551,6 @@ section
 .card_3_line
     {
         transition: width 2s ease-in-out, background-color 2s ease-in-out;
-    }
-
-.white_card_3
-    {
-        width: 584px;
-        height: 682px;
-    }
-
-.grey_for_img_card_2
-    {
-        width: 780px;
-        height: 543px;
     }
 
 .grey_for_text_card_2

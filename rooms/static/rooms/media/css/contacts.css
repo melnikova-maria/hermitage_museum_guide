@@ -147,7 +147,7 @@ section
         position: absolute;
         right: 20%;
         left: 20%;
-        bottom: 21px;
+        bottom: 20px;
         border-bottom: 2px solid #151515;
         transition: 1s;
         transform: scaleX(0);
