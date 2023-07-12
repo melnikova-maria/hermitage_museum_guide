@@ -1,6 +1,57 @@
-<h2>Log In</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Log In</button>
-</form>
+{% load static %}
+<html>
+  <head>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/login.css' %}">
+    <title> Login </title>
+  </head>
+
+  <body>
+    
+    <section>
+        
+      <div class = "image">
+            <img src = "{% static 'rooms/media/login_image.jpg' %}">
+        </div>
+
+        <div class = "container">
+
+            <!-- заголовок -->
+            <span class = "title">
+                Login
+            </span>
+            
+            <!-- форма регистрации -->
+            <div class = "forma">              
+              <form method="post">
+              {% csrf_token %}
+              {{ form.non_field_errors }}
+                <div class = "input_bx">
+                  <label for="{{ form.username.id_for_label }}">Name:</label>
+                  {{ form.username }}
+                  {{ form.username.errors }}
+                </div>
+
+                <div class = "input_bx">
+                  <label for="{{ form.password.id_for_label }}">Password:</label>
+                  {{ form.password }}
+                  {{ form.password.errors }}
+                </div>
+
+                <!-- кнопки входа и регистрации -->
+                <div class = "in_or_reg_wrapper">
+                  <div class = "in">
+                    <button type="submit">Login</button>
+                  </div>
+                </div>
+
+              </form>
+
+            </div>
+
+        </div>
+    </section>
+  </body>
+
+
+</html>
