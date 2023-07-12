@@ -28,5 +28,6 @@ urlpatterns = [
             authentication_form=UserLoginForm
             ),
          name='login'),
+    path('signup/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 ]

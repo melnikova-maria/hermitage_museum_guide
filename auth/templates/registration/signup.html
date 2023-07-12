@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+  <head>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/login.css' %}">
+    <title> Login </title>
+  </head>
+
+  <body>
+    <section>
+        <div class = "image">
+            <img src = "{% static 'rooms/media/login_image.jpg' %}">
+        </div>
+        <div class="container">
+            <span class = "title">
+                Sign Up
+            </span>
+            <div class="forma">
+                <form method="post">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        <div class="input_bx">
+                            {{ field.label_tag }}
+                            {{ field }}
+                            {% if field.help_text %}
+                                <small style="color: grey">{{ field.help_text }}</small>
+                            {% endif %}                         
+                        </div>
+                    {% endfor %}
+                    <div class = "in_or_reg_wrapper">
+                        <div class = "in">
+                          <button type="submit">Sign Up</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>
