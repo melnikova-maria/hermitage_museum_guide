@@ -200,6 +200,7 @@ body
         border-bottom: 2px solid #ffffff;
         transition: 1s;
         transform: scaleX(0);
+        animation: text 5s 1;
     }
 
 .intro_login:hover:before
@@ -255,6 +256,7 @@ body
         border-bottom: 2px solid #ffffff;
         transition: 1s;
         transform: scaleX(0);
+        animation: text 5s 1;
     }
 
 .intro_navigation ul li:hover:before
@@ -634,6 +636,27 @@ section
     {
         right: 80%;
         transition-delay: 100ms;
+    }
+
+/***************  нижняя панель  ***************/
+.final_bar
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        margin-bottom: 40px;
+        margin-left: 30px;
+        width: 100%;
+        height: 10%;
+        bottom: 0px;
+        position: fixed;
+    }
+
+.final_bar img
+    {
+        position: absolute;
+        filter: brightness(70%);
+        animation: text 5s 1;
     }
 
 /***************  анимация  ***************/

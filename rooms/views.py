@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from .forms import UserForm
 
 # Create your views here.
 
@@ -44,3 +45,8 @@ def winter_palace(request):
     template = loader.get_template('rooms/winter_palace.html')
     context = {}
     return HttpResponse(template.render(context, request))
+
+# эксперимент
+def index(request):
+    userform = UserForm()
+    return render(request, "rooms/main.html", {"form": userform})

@@ -132,6 +132,7 @@ body
         border-bottom-color: var(--color_border);
         transition: 1s;
         transform: scaleX(0);
+        animation: text 5s 1;
     }
 
 .intro_login:hover:before
@@ -189,6 +190,7 @@ body
         border-bottom-color: var(--color_border);
         transition: 1s;
         transform: scaleX(0);
+        animation: text 5s 1;
     }
 
 .intro_navigation ul li:hover:before

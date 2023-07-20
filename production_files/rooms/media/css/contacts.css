@@ -151,6 +151,7 @@ section
         border-bottom: 2px solid #151515;
         transition: 1s;
         transform: scaleX(0);
+        animation: text 5s 1;
     }
 
 .intro_login:hover:before
@@ -206,6 +207,7 @@ section
         border-bottom: 2px solid #151515;
         transition: 1s;
         transform: scaleX(0);
+        animation: text 5s 1;
     }
 
 .intro_navigation ul li:hover:before

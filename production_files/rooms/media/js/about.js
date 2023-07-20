@@ -55,7 +55,7 @@ window.addEventListener('scroll', () => {
             title_winter_palace.style.transform = `translateY(${scroll / (section_height + sectionY.top) * 200 - 200}px)`; // надпись WINTER PALACE двигается вниз
             
             line_hor.style.width = `${scroll / (sectionY.top + section_height) * 587}px`; // горизонтальная линия WINTER PALACE двигается вправо
-            line_ver.style.backgroundColor = "#151515"; //темный
+            // line_ver.style.backgroundColor = "#151515"; //темный
         }
 
     if (scroll / (section_height + sectionY.top) * -200 + 200 >= 0)
@@ -69,12 +69,12 @@ window.addEventListener('scroll', () => {
     //     }
 
 //--------NEW HERMITAGE--------//
-    if ((scroll - 968) / (section_height + sectionY.top + 968) * 190 - 170 >= -180 && (scroll - 968) / (section_height + sectionY.top + 968) * 190 - 170 <= 10)
+    if ((scroll - 968) / (section_height + sectionY.top + 968) * 190 - 170 >= -180 && (scroll - 968) / (section_height + sectionY.top + 968) * 190 - 170 <= 5)
         {
             title_new_hermitage.style.transform = `translateY(${(scroll - 968) / (section_height + sectionY.top + 968) * 190 - 170}px)`; // надпись NEW HERMITAGE двигается вниз
 
             line_hor_new.style.width = `${(scroll - 968) / (sectionY.top + section_height + 968) * 590}px`; // горизонтальная линия NEW HERMITAGE двигается влево
-            line_ver_new.style.backgroundColor = "#151515";
+            // line_ver_new.style.backgroundColor = "#151515";
         }
 
     if ((scroll - 968) / (section_height + sectionY.top + 968) * 190 - 170 >= -180 && (scroll - 968) / (section_height + sectionY.top + 968) * 190 - 170 <= 10)
@@ -93,7 +93,7 @@ window.addEventListener('scroll', () => {
             title_old_hermitage.style.transform = `translateY(${(scroll - 1936) / (section_height + sectionY.top + 1936) * 255 - 200}px)`; // надпись OLD HERMITAGE двигается вниз
 
             line_hor_old.style.width = `${(scroll - 1936) / (sectionY.top + section_height + 1936) * 725}px`; // горизонтальная линия OLD HERMITAGE двигается влево
-            line_ver_old.style.backgroundColor = "#151515";
+            // line_ver_old.style.backgroundColor = "#151515";
         }
 
     if ((scroll - 1936) / (section_height + sectionY.top + 1936) * 200 - 200 >= -220 && (scroll - 1936) / (section_height + sectionY.top + 1936) * 200 - 200 <= -50)
@@ -109,11 +109,11 @@ window.addEventListener('scroll', () => {
     //     }
 
     // горизонтальная линия ABOUT US двигается влево
-    if (scroll >= 3546)
-        {
-            line_comp.style.width = `${(scroll - 3546) / (sectionY.top + section_height + 3546) * 3400}px`;
-            line_comp.style.borderBottomColor = "#c4c4c4";
-        }
+    // if (scroll >= 3546)
+    //     {
+    //         line_comp.style.width = `${(scroll - 3546) / (sectionY.top + section_height + 3546) * 3400}px`;
+    //         line_comp.style.borderBottomColor = "#c4c4c4";
+    //     }
         
     // изменение цвета меню в зависимости от фонового цвета
     if (scroll >= 345)

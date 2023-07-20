@@ -4,6 +4,44 @@
         <meta name = "viewport" content = "width=device-width, initial-scale=1">
         <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/winter_palace.css' %}">
         <title> Winter palace </title>
+
+        <style>
+            .container
+                {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                    height: 100%;
+                    bottom: 0px;
+                    left: 0px;
+                    z-index: 200;
+                    background-color: #ececec;
+                    position: fixed;
+                }
+
+            .feedback_form
+                {
+                    width: 60%;
+                    background: red;
+                }
+
+            .container .title
+                {
+                    color: #151515;
+                    font-size: 57px;
+                    margin-bottom: 7%;
+                    animation: text 5s 1;
+                }
+
+            .container .title p
+                {
+                    font-size: 25px;
+                    animation: text 5s 1;
+                }
+
+        </style>
     </head>
     
     <body>
@@ -44,6 +82,13 @@
                 </div>
 
                 <div id = "arrow"> <br> SCROLL <br> </div>
+
+                <div class = "final_bar">
+                    <img src = "{% static 'rooms/media/feedback.png' %}" alt="">
+                </div>
+
+                
+
             </div>
 
             <div class = "img-slider">
@@ -143,6 +188,18 @@
                 </div>
             </div>
             
+            <div class = "container">
+
+                <!-- заголовок -->
+                <span class = "title">
+                    Hi there, text us!
+
+                    <p>
+                        We would be happy to see your suggestions for improving our guide.
+                    </p>
+                </span>
+                <div class = "feedback_form">ворамлоивоамир</div>
+            </div>
         </div>
 
         <section>

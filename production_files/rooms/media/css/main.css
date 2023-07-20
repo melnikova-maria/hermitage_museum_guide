@@ -122,6 +122,7 @@ body
         border-bottom: 2px solid #ffffff;
         transition: 1s;
         transform: scaleX(0);
+        animation: text 5s 1;
     }
 
 .intro_login:hover:before
@@ -178,6 +179,7 @@ body
         border-bottom: 2px solid #ffffff;
         transition: 1s;
         transform: scaleX(0);
+        animation: text 5s 1;
     }
 
 .intro_navigation ul li:hover:before
@@ -262,7 +264,7 @@ body
         width: 250px;
         border-radius: 0px;
         background-color: transparent;
-        border-bottom: 1px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
     }
 
 /***************  анимация  ***************/
