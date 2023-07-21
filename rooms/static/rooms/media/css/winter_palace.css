@@ -344,6 +344,7 @@ body
         border-bottom: 2px solid #ffffff;
     }
 
+/***************  секция 1 ***************/
 section
     {
         width: 100%;
@@ -361,7 +362,6 @@ section
         background: linear-gradient(to top, #151515, #151515f4, #15151578, #15151500);
     }
 
-/***************  секция 1 ***************/
 .container_sec_1, .container_sec_2 
     {
         display: grid;

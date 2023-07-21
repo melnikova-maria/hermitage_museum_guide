@@ -12,39 +12,217 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    width: 50%;
-                    height: 100%;
-                    bottom: 0px;
-                    left: 0px;
-                    z-index: 200;
-                    background-color: #ececec;
+                    width: 49%;
+                    height: 99.9%;
+                    top: 0px;
+                    transform: translateX(-100%);
+                    border: solid 1px #CCCCCC;
                     position: fixed;
+                    z-index: 21;
                 }
 
-            .feedback_form
+            .container_active
+                {
+                    transform: translateX(0%);
+                }
+
+            .container_in
+                {
+                    /* display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center; */
+                    width: 80%;
+                    height: 80%;
+                    background: #CCCCCC;
+                    position: fixed;
+                    z-index: 21;
+                }
+
+            /* .feedback_form
                 {
                     width: 60%;
                     background: red;
                 }
 
-            .container .title
+            .title_feedback
                 {
                     color: #151515;
                     font-size: 57px;
-                    margin-bottom: 7%;
                     animation: text 5s 1;
-                }
+                } */
 
-            .container .title p
+            /* .container .title_feedback p
                 {
                     font-size: 25px;
                     animation: text 5s 1;
+                } */
+
+            .feedback_button
+                {
+                    position: fixed;
+                    /* left: 45.5%; */
+                    left: -76px;
+                    top: 45%;
+                    height: 50px;
+                    width: 200px;
+                    -webkit-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                    -ms-transform: rotate(90deg);
+                    -moz-transform: rotate(90deg);
+                    border: solid 1px #CCCCCC;
+                    background: #ffffff00;
+                    color: #ffffff;
+                    font-size: 19px;
+                    font-weight: lighter;
                 }
+
+
+            .intro_bar
+                {
+                    z-index: 22;
+                }
+
+                /* .menu {
+  position: fixed;
+  left: 0;top: 0;
+  z-index: 99;
+  width: 30%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transition: 0.5s;
+  transform: translateX(-80);
+  background-color: #27ae60;
+}
+
+.menu.active {
+    left: 0;
+}
+
+.menu-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #333;
+  position: absolute;
+  right: -35px;
+  top: 10px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 800;
+  background: #ffffff;
+  padding: 15px;
+  z-index: 99;
+}
+
+.navbar,
+.main {
+  left: 800px;
+  width: calc(100% - 800px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+.sidebar.close ~ .navbar,
+.sidebar.close ~ .main {
+  left: 0;
+  width: 100%;
+}
+.navbar {
+  position: fixed;
+  top: 45%;
+  color: #ffffff;
+  font-size: 25px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.navbar #sidebar-close {
+  cursor: pointer;
+}
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 100;
+  background: #ffffff00;
+} */
+
+.sidenav {
+  position: fixed;
+  height: 99.9%;
+  width: 0;
+  top: 0;
+  left: -4px;
+  background-color: #151515;
+  border: solid 2px #cccccc7b;
+  overflow-x: hidden;
+  padding-top: 60px;
+  z-index: 21;
+  transition: 2s ease-in-out;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 60px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.feedback_button
+{
+    position: fixed;
+    transition: 2s ease-in-out;
+    left: -76px;
+    top: 45%;
+    height: 50px;
+    width: 200px;
+    transform: rotate(90deg);
+    border: solid 1px #CCCCCC;
+    background: #ffffff00;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: lighter;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    z-index: 21;
+}
 
         </style>
     </head>
     
     <body>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          </div>
+          
+          <span id="myButton" class = "feedback_button" onclick="openNav()">
+              Your suggestions
+          </span>
+                    <!-- <nav class="sidebar">
+            </nav>
+            <nav class="navbar">
+              <div class="feedback_button" id="sidebar-close"></div>
+            </nav>
+            <main class="main"></main> -->
         <div class = "intro">
 
             <div class = "intro_title">
@@ -83,13 +261,20 @@
 
                 <div id = "arrow"> <br> SCROLL <br> </div>
 
-                <div class = "final_bar">
-                    <img src = "{% static 'rooms/media/feedback.png' %}" alt="">
-                </div>
+                    <!-- <img src = "{% static 'rooms/media/feedback.png' %}" alt=""> -->
+                    <!-- <a href="#" class="feedback_button"></a> -->
+
+
+
+                    <!-- <div class="menu">
+                        <a href="#" class="menu-btn" id="sidebar-close"></a>
+                      </div> -->
 
                 
 
             </div>
+
+
 
             <div class = "img-slider">
                 <div class = "slide active">
@@ -188,18 +373,19 @@
                 </div>
             </div>
             
-            <div class = "container">
+            <!-- <div class = "container">
+                <div class="container_in"> -->
+                    <!-- заголовок -->
+                    <!-- <span class = "title_feedback">
+                        Hi there, text us!
+                        <p>
+                            We would be happy to see your suggestions for improving our guide.
+                        </p>
+                    </span>
+                    <div class = "feedback_form">ворамлоивоамир</div>
+                </div>
 
-                <!-- заголовок -->
-                <span class = "title">
-                    Hi there, text us!
-
-                    <p>
-                        We would be happy to see your suggestions for improving our guide.
-                    </p>
-                </span>
-                <div class = "feedback_form">ворамлоивоамир</div>
-            </div>
+            </div> -->
         </div>
 
         <section>
@@ -336,6 +522,22 @@
         </section>
 
         <script src = "{% static 'rooms/media/js/winter_palace.js' %}"></script>
+        <script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "49.3%";
+  document.getElementById("myButton").style.left = "-2%";
+  document.getElementById("myButton").style.cursor = "auto";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("myButton").style.left = "-76px";
+}
+// const sidebar = document.querySelector(".sidebar");
+// const sidebarClose = document.querySelector("#sidebar-close");
+
+// sidebarClose.addEventListener("click", () => sidebar.classList.toggle("close"));
+        </script>
     </body>
 </html>
       
