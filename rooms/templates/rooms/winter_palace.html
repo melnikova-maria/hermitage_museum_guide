@@ -1,0 +1,292 @@
+{% load static %}
+<html lang="en" dir="ltr">
+    <head>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/winter_palace.css' %}">
+        <title> Winter palace </title>
+    </head>
+    
+    <body>
+        <div class = "intro">
+
+            <div class = "intro_title">
+                <span class = "title">
+                    WINTER PALACE
+                </span>
+            </div>
+
+            <div class = "intro_bar">
+
+                {% if user.is_authenticated %}
+                <div class = "intro_login">
+                    <span class = "login">
+                        <a href = "accounts/logout/"> Log out </a>
+                    </span>                    
+                </div>         
+                {% else %}
+                <!-- регистрация -->
+                <div class = "intro_login">
+                    <span class = "login">
+                        <a href = "/login"> Login </a>
+                    </span>                    
+                </div>
+                {% endif %}
+
+                <!-- навигация -->
+                <div class = "intro_navigation">
+                    <ul>
+                        <li> <a href = "/rooms/winter_palace" > Winter Palace </a> </li>
+                        <li> <a href = "/rooms/new_hermitage" > New Hermitage </a> </li>
+                        <li> <a href = "/rooms/old_hermitage" > Old Hermitage </a> </li>
+                        <li> <a href = "/about" > About </a> </li>
+                        <li> <a href = "/contacts" > Contacts </a> </li>
+                    </ul>
+                </div>
+
+                <!-- поиск -->
+                <div class = "intro_search">
+                    <div class = "search_box">
+                        <button class = "btn_search"></button>
+                        <input class = "input_search" placeholder = " Type to search...">
+                    </div>
+                </div>
+
+                <div id = "arrow"> <br> SCROLL <br> </div>
+            </div>
+
+            <div class = "img-slider">
+                <div class = "slide active">
+                    <img src = "{% static 'rooms/media/winter_palace/win_slide_1.jpg' %}" alt="">
+                    <div class = "info">
+                        <span class = "title_soon">
+                            SOON Fedor Yakovlevich Alekseev
+                            <p>
+                                Fedor Alexeev’s painting “View of Moscow. Educational Home” depicts the educational building located on the banks of the river
+                                in the late XVIII - early XIX centuries.
+                            </p>
+            
+                            <p>
+                                In the picture, the author masterfully shows the architecture of the building, the trees and the landscape around it,
+                                emphasizing the unity of the man and nature.
+                            </p>
+                        </span>
+                    </div>
+
+                </div>
+                <div class = "slide">
+                    <img src = "{% static 'rooms/media/winter_palace/win_slide_2.jpg' %}" alt="">
+                    <div class = "info">
+                        <span class = "title_soon">
+                            SOON Balthasar van der Ast
+                            <p>
+                                Balthasar van der Ast is a Dutch painter who specialized in still life paintings. His work is characterized by vibrant colors,
+                                detailed brushwork, and an emphasis on realism.
+                            </p>
+            
+                            <p>
+                                One of his most famous works is "Still life with Fruits", which features a variety of fruit arranged on a tabletop in a realistic
+                                and naturalistic manner. This painting captures the freshness and and is an example of van der Ast's mastery of still life painting. 
+                            </p>
+                        </span>
+                    </div>
+                </div>
+                <div class = "slide">
+                    <img src = "{% static 'rooms/media/winter_palace/win_slide_3.jpg' %}" alt="">
+                    <div class = "info">
+                        <span class = "title_soon">
+                            SOON Hubert Robert
+                            <p>
+                                Hubert Robert is a French landscape painter known for his beautiful and serene paintings of rural landscapes.
+                                He is considered one of the most important landscape painters of the 19th century.
+                            </p>
+            
+                            <p>
+                                His "Architectural Landscape with Canal" is one of his most famous pieces, featuring a calm and peaceful scene with buildings,
+                                boats, and trees, bathed in warm sunlight. The painting is characterized by muted colors and refined brushwork, creating a sense of
+                                depth and motion in the scene. 
+                            </p>
+                        </span>
+                    </div>
+                </div>
+                <div class = "slide">
+                    <img src = "{% static 'rooms/media/winter_palace/win_slide_4.jpg' %}" alt="">
+                    <div class = "info">
+                        <span class = "title_soon">
+                            SOON Jacob Philipp Heckert
+                            <p>
+                                Jacob Philipp Heckert is a German landscape painter who is known for his lush and naturalistic landscapes.
+                            </p>
+            
+                            <p>
+                                His painting The Patron's Villa and Waterfalls in Tivoli depicts a serene and peaceful setting in Italy, surrounded by waterfalls
+                                and lush trees. The colors used are vibrant and rich with greens, blues and yellows. The brushwork used is smooth and fluid which
+                                creates the illusion of motion in the water and the trees. 
+                            </p>
+                        </span>
+                    </div>
+                </div>
+                <div class = "slide">
+                    <img src = "{% static 'rooms/media/winter_palace/win_slide_5.jpg' %}" alt="">
+                    <div class = "info">
+                        <span class = "title_soon">
+                            SOON Luis Melendez
+                            <p>
+                                Luis Melendez is a Spanish painter known for creating vibrant and colorful still-life paintings.
+                            </p>
+            
+                            <p>
+                                In "Still-Life with Figs" he captures the essence of Spanish Golden Age artistry through bright jewel-like hues and intricate
+                                brushstrokes. The figs arranged realistically on the table capture the freshness of the moment, giving this piece a sense of
+                                vibrancy and movement.
+                            </p>
+                        </span>
+                    </div>
+                </div>
+                <div class = "navigation">
+                    <div class = "btn active"></div>
+                    <div class = "btn"></div>
+                    <div class = "btn"></div>
+                    <div class = "btn"></div>
+                    <div class = "btn"></div>
+                </div>
+            </div>
+            
+        </div>
+
+        <section>
+            <div class = "shadow"></div>
+
+                <div class = "container_sec_1">
+                    <div class = "card_1">
+
+                        <div class = "card_1_info info_1">
+                            <span class = "info_text">OTHER WORKS: "Picture. Portrait of two children behind a book"</span>
+
+                            <div class = "info_image_1">
+                                <img src = "{% static 'rooms/media/winter_palace/card_1_1.jpg' %}" alt="">
+                            </div>
+                        </div>
+
+                        <img src = "{% static 'rooms/media/winter_palace/card_1.jpg' %}" class = "card_1_img" alt="">
+                        
+                        <div class = "white_card_1"></div>
+                        
+                        <div class = "card_1_content">
+                            HEAD OF A GIRL IN A BLUISH TUNIC
+                            <div class = "card_1_line"></div>
+
+                            <p>
+                                The painting is a masterpiece that captures the beauty of a young girl’s face in a blue tunic, and the use of light and
+                                shadow creates a sense of realism and depth.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class = "card_4">
+
+                        <div class = "card_4_info info_1">
+                            <span class = "info_text"> OTHER WORKS: "Marriage in Cana of Galilee" </span>
+
+                            <div class = "info_image_4_1">
+                                <img src = "{% static 'rooms/media/winter_palace/card_4_1.jpg' %}" alt="">
+                            </div>
+                        </div>
+
+                        <div class = "card_4_info info_2">
+                            <span class = "info_text"> OTHER WORKS: "Portrait of a man" </span>
+
+                            <div class = "info_image_4_2">
+                                <img src = "{% static 'rooms/media/winter_palace/card_4_2.jpg' %}" alt="">
+                            </div>
+                        </div>
+
+                        <img src = "{% static 'rooms/media/winter_palace/card_4.jpg' %}" class = "card_1_img" alt="">
+
+                        <div class = "grey_for_img_card_4"></div>
+                        <div class = "grey_for_text_card_4"></div>
+
+                        <div class = "card_4_content">
+                            PORTRAIT OF AN OLD WOMAN
+                            <div class = "card_4_line"></div>
+
+                            <p>
+                                The painting "Portrait of an Old Lady" by Bassano Leandro is a masterpiece that captures the essence of age and wisdom.
+                                It depicts a woman who is sitting on a chair in front of a table. She is wearing a bright red dress with a dark blue cape.
+                                Her face is covered in wrinkles.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class = "container_sec_2">
+                <div class = "card_2">
+
+                    <div class = "card_2_info info_1">
+                        <span class = "info_text"> AUTHOR: Louis-François Lejeune </span>
+
+                        <div class = "info_image_2">
+                            <img src = "{% static 'rooms/media/winter_palace/card_2_1.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    
+                    <img src = "{% static 'rooms/media/winter_palace/card_2.jpg' %}" class = "card_1_img" alt="">
+                    
+                    <div class = "grey_for_img_card_2"></div>
+                    <div class = "grey_for_text_card_2"></div>
+                    
+                    <div class = "card_2_content">
+                        BATTLE OF MOSCOW SEPTEMBER 7, 1812
+                        <div class = "card_2_line"></div>
+
+                        <p>
+                            “The Battle of Moscow,” by Adam and Albrécht, portrays a pivotal moment in the Russian-French War of 1812 when the Russian Army fought
+                            off Napoleon’s troops. The painting depicts the decisive three-day battle that took place on 7 September 1812 in which the French
+                            suffered heavy losses while the Russians managed to delay the advancing French army.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class = "card_3">
+
+                    <div class = "card_3_info info_1">
+                        <span class = "info_text"> AUTHOR: Jacques-Louis David </span>
+
+                        <div class = "info_image_3_1">
+                            <img src = "{% static 'rooms/media/winter_palace/card_3_1.jpg' %}" alt="">
+                        </div>
+                    </div>
+
+                    <div class = "card_3_info info_2">
+                        <span class = "info_text"> OTHER WORKS: "Oath of the Horatii" </span>
+
+                        <div class = "info_image_3_2">
+                            <img src = "{% static 'rooms/media/winter_palace/card_3_2.jpg' %}" alt="">
+                        </div>
+                    </div>
+
+                    <img src = "{% static 'rooms/media/winter_palace/card_3.jpg' %}" class = "card_1_img" alt="">
+
+                    <div class = "white_card_3"></div>
+
+                    <div class = "card_3_content">
+                        NAPOLEON CROSSING THE ALPS
+                        <div class = "card_3_line"></div>
+
+                        <p>
+                            The heroism of Napoleon was to show in “Napoleon crossing the Alps” by Jacques David.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <script src = "{% static 'rooms/media/js/winter_palace.js' %}"></script>
+    </body>
+</html>
+      

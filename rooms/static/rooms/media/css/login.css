@@ -1,0 +1,277 @@
+*
+    {
+        box-sizing: border-box;
+    }
+
+body
+    {
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+        filter: brightness(100%);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        animation: body 3s 1;
+    }
+
+section
+    {   
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+
+/***************  изображение  ***************/
+section .image
+    {
+        position: relative;
+        height: 100%;
+        width: 50%;
+    }
+
+section .image::before
+    {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+    }
+
+section .image img
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        object-fit: cover;
+        filter: brightness(80%);
+    }
+
+/***************  форма входа  ***************/
+section .container
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        z-index: 2;
+        background-color: #dadfd8;
+    }
+
+section .container .forma
+    {
+        width: 60%;
+    }
+
+section .container .title
+    {
+        color: rgba(0, 0, 0, 0.719);
+        font-size: 57px;
+        margin-bottom: 7%;
+        animation: text 5s 1;
+    }
+
+section .container .forma .input_bx
+    {
+        margin-bottom: 6%;
+        width: 0%;
+
+        -webkit-animation: title 4s;
+        -moz-animation:    title 4s; 
+        -o-animation:      title 4s; 
+        animation:         title 4s;
+        animation-fill-mode: forwards;
+    }
+
+section .container .forma .input_bx span
+    {
+        display: inline-block;
+        color: rgba(0, 0, 0, 0.62);
+        font-size: 29px;
+        animation: text 5s 1;
+    }
+
+section .container .forma .input_bx input
+    {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        outline: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        border-top: 1px solid rgba(255, 255, 255, 0);
+        border-right: 1px solid rgba(255, 255, 255, 0);
+        border-left: 1px solid rgba(255, 255, 255, 0);
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.62);
+        animation: text 5s 1;
+    }
+
+/***************  кнопки входа и регистрации  ***************/
+.in_or_reg_wrapper
+    {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 15%;
+        position: relative;
+    }
+
+.in, .reg
+    {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+    }
+
+.in ul, .reg ul
+    {
+        padding-inline-start: 0px;
+    }
+
+.in ul li, .reg ul li
+    {
+        list-style: none;
+        position: relative;
+    }
+
+.in ul li a, .reg ul li a
+    {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.62);
+        font-size: 26px;
+        cursor: pointer;
+        animation: text 5s 1;
+    }
+
+.in button, .reg button
+    {
+        color: rgba(0, 0, 0, 0.62);
+        font-size: 26px;
+        text-decoration: none;
+        border: 0;
+        background-color: rgba(28,28,28,0)
+    }
+
+.in:before
+    {
+        content: '';
+        position: absolute;
+        right: 0%;
+        left: 0%;
+        bottom: -3px;
+        width: 0%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        transition: 2s;
+    }
+
+.in:hover:before, .reg:hover:before
+    {
+        width: 100%;
+    }
+
+.reg
+    {
+        justify-content: right;
+        left: 50%;
+    }
+
+.reg:before
+    {
+        content: '';
+        position: absolute;
+        right: 0%;
+        bottom: -3px;
+        width: 0%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        transition: 2s;
+    }
+
+/***************  анимация  ***************/
+@keyframes body
+    {
+        0%
+            {
+                filter: brightness(0%);
+            }
+    }
+
+@keyframes text
+    {
+        0%
+            {
+                opacity: 0%;
+            }
+    }
+
+@keyframes title
+    {
+        100%
+            {
+                width: 100%;
+            }
+    }
+
+/***************  изменение масштаба  ***************/
+@media (max-width: 830px)
+{
+    section .image
+        {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0px;
+            left: 0px;
+        }
+
+    section .image:before
+        {
+            top: 15%;
+            background-image: radial-gradient(rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
+            filter: brightness(100%);
+            z-index: 1;
+        }
+
+    section .container
+        {
+            width: 100%;
+            background-color:  #b5b5b400;
+        }
+
+    section .container .title, section .container .forma .input_bx span, .in ul li a, .reg ul li a
+        {
+            color: #ffffff;
+        }
+
+    section .container .forma
+        {
+            padding: 30px;
+        }
+
+    section .container .forma .input_bx input
+        {
+            border-bottom: 1px solid #ffffff;
+            border-top: 1px solid rgba(255, 255, 255, 0);
+            border-right: 1px solid rgba(255, 255, 255, 0);
+            border-left: 1px solid rgba(255, 255, 255, 0);
+            color: #ffffff;
+        }
+
+    section .container .forma .input_bx p a
+        {
+            background: rgba(255, 255, 255, 0);
+            color: #ffffff;
+        }
+
+
+    .in:before, .reg:before
+        {
+            border-bottom: 1px solid #ffffff;
+        }
+}

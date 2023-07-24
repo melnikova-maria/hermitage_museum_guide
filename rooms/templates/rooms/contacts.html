@@ -1,0 +1,94 @@
+{% load static %}
+<html>
+    <head>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/contacts.css' %}">
+        <title> Contacts </title>
+    </head>
+
+    <body>
+        <div class = "frame_up">
+            <div class = "intro_bar">
+    
+                {% if user.is_authenticated %}
+                <div class = "intro_login">
+                    <span class = "login">
+                        <a href = "accounts/logout/"> Log out </a>
+                    </span>                    
+                </div>         
+                {% else %}
+                <!-- регистрация -->
+                <div class = "intro_login">
+                    <span class = "login">
+                        <a href = "/login"> Login </a>
+                    </span>                    
+                </div>
+                {% endif %}
+
+                <!-- навигация -->
+                <div class = "intro_navigation">
+                    <ul>
+                        <li> <a href = "/rooms/winter_palace" > Winter Palace </a> </li>
+                        <li> <a href = "/rooms/new_hermitage" > New Hermitage </a> </li>
+                        <li> <a href = "/rooms/old_hermitage" > Old Hermitage </a> </li>
+                        <li> <a href = "/about" > About </a> </li>
+                        <li> <a href = "/contacts" > Contacts </a> </li>
+                    </ul>
+                </div>
+
+                <!-- поиск -->
+                <div class = "intro_search">
+                    <div class = "search_box">
+                        <button class = "btn_search"></button>
+                        <input class = "input_search" placeholder = " Type to search...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "frame_right"></div>
+        <section>
+            <div class = "intro_title">
+                <span class = "title">
+                    CONTACTS
+                </span>
+            </div>
+
+
+            <div class = "container">
+                <div class = "intro_contacts">
+                    <span class = "title_contacts">
+                        WHERE WE STAND
+
+                        <p>
+                            The State Hermitage Museum, Russia, 190000, St. Petersburg, Dvortsovaya Embankment, 34
+                        </p>
+                    </span>
+
+                    <span class = "title_contacts">
+                        WHEN WE ARE OPEN
+                        <p>
+                            Monday – Saturday: 10am-7pm
+                        </p>
+                        <p>
+                            Sunday: 12pm-6pm
+                        </p>
+                    </span>
+
+                    <span class = "title_contacts">
+                        HOW TO CONTACT US
+                        <p>
+                            Phone number: +7(812)710-90-79
+                        </p>
+                        <p>
+                            Email: chancery@hermitage.ru
+                        </p>
+                    </span>
+                </div>
+            </div>
+
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Tzf5s6EZ96kGP213QVNGjMTL4gashLI&ehbc=2E312F" width = 43% height = 100% style = "border:0;" position = "absolute"></iframe>
+        </section>
+        <div class = "frame_down"></div>
+        
+    </body>
+</html>

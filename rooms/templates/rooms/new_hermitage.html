@@ -1,0 +1,225 @@
+{% load static %}
+<html lang="en" dir="ltr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/new_hermitage.css' %}">
+        <title> New Hermitage </title>
+    </head>
+
+    <body>
+        <div class = "intro">
+
+            <div class = "intro_title">
+                <span class = "title">
+                    NEW HERMITAGE
+                </span>
+            </div>
+
+            <div class = "intro_bar">
+
+                {% if user.is_authenticated %}
+                <div class = "intro_login">
+                    <span class = "login">
+                        <a href = "accounts/logout/"> Log out </a>
+                    </span>                    
+                </div>         
+                {% else %}
+                <!-- регистрация -->
+                <div class = "intro_login">
+                    <span class = "login">
+                        <a href = "/login"> Login </a>
+                    </span>                    
+                </div>
+                {% endif %}
+
+                <!-- навигация -->
+                <div class = "intro_navigation">
+                    <ul>
+                        <li> <a href = "/rooms/winter_palace" > Winter Palace </a> </li>
+                        <li> <a href = "/rooms/new_hermitage" > New Hermitage </a> </li>
+                        <li> <a href = "/rooms/old_hermitage" > Old Hermitage </a> </li>
+                        <li> <a href = "/about" > About </a> </li>
+                        <li> <a href = "/contacts" > Contacts </a> </li>
+                    </ul>
+                </div>
+
+                <!-- поиск -->
+                <div class = "intro_search">
+                    <div class = "search_box">
+                        <button class = "btn_search"></button>
+                        <input class = "input_search" placeholder = " Type to search...">
+                    </div>
+                </div>
+
+                <div id = "arrow"> <br> SCROLL <br> </div>
+            </div>
+
+            <div class = "img-slider">
+                <div class = "slide active">
+                    <img src = "{% static 'rooms/media/new_hermitage/slide_1.jpg' %}" alt="">
+                    <div class = "info">
+                        <span class = "title_soon">
+                            SOON A Tiara With The Image Of A Gorgon
+                            <p>
+                                The diadem was found in the tomb of the King of Etruria in the city of Rome. It was a symbol of power and prestige, and it was
+                                used by royalty to show their rank and status. The gorgon’s image in the center of the diadem was believed to be a representation
+                                of the goddess Athena, who was known for her wisdom and power.
+                            </p>
+            
+                            <p>
+                                The oval leaves around the gorgon were believed to represent the protection that the goddess provided to those who wore the diadem.
+                            </p>
+                        </span>
+                    </div>
+
+                </div>
+                <div class = "slide">
+                    <img src = "{% static 'rooms/media/new_hermitage/slide_2.jpg' %}" alt="">
+                    <div class = "info">
+                        <span class = "title_soon">
+                            SOON A Cup With The Emblem Of Laval
+                            <p>
+                                The bowl was created in the early 16th century in France. The bowl, which is made of clay and covered with lead glaze, has a unique
+                                design with two curved sides. It was commissioned by a church to be used for religious ceremonies and is believed to represent
+                                the grace and beauty of God.
+                            </p>
+
+                            <p>
+                                After its creation, the bowl was donated to the church and remained in their collection until it was
+                                discovered by a collector and purchased for a large sum of money.
+                            </p>
+                        </span>
+                    </div>
+                </div>
+                <div class = "slide">
+                    <img src = "{% static 'rooms/media/new_hermitage/slide_3.jpg' %}" alt="">
+                    <div class = "info">
+                        <span class = "title_soon">
+                            SOON A Bottle In The Shape Of A Fish
+                            <p>
+                                The bottle was created by glassworkers in the ancient city of Chersonesus, located on the Crimean Peninsula. It is believed to
+                                have been a gift from a wealthy patron or perhaps a tribute to a Roman emperor. The bottle’s shape, which resembles a fish, is
+                                thought to be a symbol of wealth and prosperity. 
+                            </p>
+            
+                            <p>
+                                The glass used in the bottle is believed to be of the highest quality, making it a highly valued artifact.
+                            </p>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class = "navigation">
+                    <div class = "btn active"></div>
+                    <div class = "btn"></div>
+                    <div class = "btn"></div>
+                </div>
+            </div>
+            
+        </div>
+
+        <section>
+            <div class = "shadow"></div>
+
+                <div class = "container_sec_1">
+                    <div class = "card_1">
+
+                        <div class = "card_1_info info_1">
+                            <span class = "info_text"> AUTHOR: Kresilai </span>
+
+                            <div class = "info_image_1">
+                                <img src = "{% static 'rooms/media/new_hermitage/card_1_1.jpg' %}" alt="">
+                            </div>
+                        </div>
+
+                        <img src = "{% static 'rooms/media/new_hermitage/card_1.jpeg' %}" class = "card_1_img" alt="">
+                        
+                        <div class = "grey_for_img_card_1"></div>
+                        <div class = "grey_for_text_card_1"></div>
+                        
+                        <div class = "card_1_content">
+                            ATHENA'S HEAD
+                            <div class = "card_1_line"></div>
+
+                            <p>
+                                The Roman work of art, known as the Head of Athena, was created during the first century CE by the Greek artist Kresilai as
+                                a representation of Greek culture and history. The marble sculpture is considered one of the greatest works of art in history.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class = "card_2">
+
+                        <div class = "card_2_info info_1">
+                            <span class = "info_text"> AUTHOR: Alcimen </span>
+
+                            <div class = "info_image_2_1">
+                                <img src = "{% static 'rooms/media/new_hermitage/card_2_1.jpg' %}" alt="">
+                            </div>
+                        </div>
+
+                        <div class = "card_2_info info_2">
+                            <span class = "info_text"> OTHER WORKS: Ares Borghese </span>
+
+                            <div class = "info_image_2_2">
+                                <img src = "{% static 'rooms/media/new_hermitage/card_2_2.jpg' %}" alt="">
+                            </div>
+                        </div>
+
+                        <img src = "{% static 'rooms/media/new_hermitage/card_2.jpeg' %}" class = "card_1_img" alt="">
+
+                        <div class = "grey_for_img_card_2"></div>
+                        <div class = "grey_for_text_card_2"></div>
+
+                        <div class = "card_2_content">
+                            BUST OF ARES
+                            <div class = "card_2_line"></div>
+
+                            <p>
+                                The bust of Ares is a Roman artwork that depicts the Greek god of war Ares and was created by
+                                the sculptor Alcimen in the early imperial era. The bust has a high quality marble surface, intricate details, and expressionist
+                                features that make it a highly valuable historical and artistic item.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class = "container_sec_2">
+                <div class = "card_3">
+
+                    <div class = "card_3_info info_1">
+                        <span class = "info_text"> RELATED: Etruscan Civilization </span>
+
+                        <div class = "info_image_3">
+                            <img src = "{% static 'rooms/media/new_hermitage/card_3_1.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    
+                    <img src = "{% static 'rooms/media/new_hermitage/card_3.jpg' %}" class = "card_1_img" alt="">
+                    
+                    <div class = "grey_for_img_card_3"></div>
+                    <div class = "grey_for_text_card_3"></div>
+                    
+                    <div class = "card_3_content">
+                        A MAN WITH AN OUTSTRETCHED HAND
+                        <div class = "card_3_line"></div>
+
+                        <p>
+                            The Etruscan reclining man figure was created in the 4th century BCE and is made of bronze. It depicts a man laying down with his arms
+                            outstretched, and is one of the earliest known bronze sculptures. The man’s pose symbolizes life, death, and rebirth, making the figure
+                            a popular subject among artists.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <script src = "{% static 'rooms/media/js/new_hermitage.js' %}"></script>
+    </body>
+</html>
+      

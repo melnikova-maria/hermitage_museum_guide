@@ -1,0 +1,49 @@
+{% load static %}
+<html>
+    <head>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/login.css' %}">
+        <title> Login </title>
+    </head>
+
+    <body>
+        <section>
+            <div class = "image">
+                <img src = "{% static 'rooms/media/login_image.jpg' %}">
+            </div>
+
+            <div class = "container">
+
+                <!-- заголовок -->
+                <span class = "title">
+                    Login
+                </span>
+                
+                <!-- форма регистрации -->
+                <div class = "forma">
+                    <form>
+
+                        <div class = "input_bx">
+                            <span> Username </span>
+                            <input type = "text" name = "">
+                        </div>
+
+                        <div class = "input_bx">
+                            <span> Password </span>
+                            <input type = "password" name = "">
+                        </div>
+
+                        <!-- кнопки входа и регистрации -->
+                        <div class = "in_or_reg_wrapper">
+                            <div class = "in"> <ul> <li> <a href = "#"> Sign in </a> </li> </ul> </div>
+                            <div class = "reg"> <ul> <li> <a href = "#"> Sign up </a> </li> </ul> </div>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+    </body>
+</html>

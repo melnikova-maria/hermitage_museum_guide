@@ -1,0 +1,198 @@
+{% load static %}
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/about.css' %}">
+        <title>About</title>
+    </head>
+
+    <body>
+            <div class = "intro">
+                <div class = "intro_image">
+                    <img src = "{% static 'rooms/media/about_us_main.jpg' %}" alt = "">
+                </div>
+    
+                <div class = "intro_title">
+                    <span class = "title">
+                        ABOUT
+                    </span>
+                </div>
+    
+                <div class = "intro_bar">
+    
+                    {% if user.is_authenticated %}
+                    <div class = "intro_login">
+                        <span class = "login">
+                            <a href = "accounts/logout/"> Log out </a>
+                        </span>                    
+                    </div>         
+                    {% else %}
+                    <!-- регистрация -->
+                    <div class = "intro_login">
+                        <span class = "login">
+                            <a href = "/login"> Login </a>
+                        </span>                    
+                    </div>
+                    {% endif %}
+    
+                    <!-- навигация -->
+                    <div class = "intro_navigation">
+                        <ul>
+                            <li> <a href = "/rooms/winter_palace" > Winter Palace </a> </li>
+                            <li> <a href = "/rooms/new_hermitage" > New Hermitage </a> </li>
+                            <li> <a href = "/rooms/old_hermitage" > Old Hermitage </a> </li>
+                            <li> <a href = "/about" > About </a> </li>
+                            <li> <a href = "/contacts" > Contacts </a> </li>
+                        </ul>
+                    </div>
+    
+                    <!-- поиск -->
+                    <div class = "intro_search">
+                        <div class = "search_box">
+                            <button class = "btn_search"></button>
+                            <input class = "input_search" placeholder = " Type to search...">
+                        </div>
+                    </div>
+                </div>
+
+                <div id = "arrow"> <br>SCROLL<br> </div>
+            </div>
+            
+            <!-- WINTER PALACE -->
+            <section>
+                <div class = "shadow"></div>
+    
+                <div class = "container_wrapper_winter">
+                    <div class = "container_winter">
+                        <div class = "title_and_text_wrapper">
+                            <div class = "title_wrapper">
+                                <span class = "title_winter_palace">
+                                    WINTER PALACE
+                                </span>
+                            </div>
+    
+                            <div class = "line_hor"></div>
+                            
+                            <div class = "text_wrapper">
+                                <div class = "line_ver"></div>
+    
+                                <span class = "text_winter_palace">
+                                    The Winter Palace in St. Petersburg is a magnificent architectural monument that has stood for centuries 
+                                    as the residence of the Russian rulers. It was built in the 18th century 
+                                    by the architect Bartolomeo Rastrelli and has since been used as a palace, museum, and venue 
+                                    for various events. During the 20th century, the palace was used as a prison and a military base, 
+                                    but in 1992 it was returned to its former glory as a cultural and tourist attraction. Today, 
+                                    it is one of the most visited tourist destinations in Russia, attracting millions of visitors 
+                                    from all over the world.
+                                </span>
+                            </div>
+                        </div>
+                        <div class = "image_container">
+                            <img src = "{% static 'rooms/media/winter_palace.jpg' %}" class = "image" alt = "">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            
+            <!-- NEW HERMITAGE -->
+            <section>
+                <div class = "container_wrapper_new">
+                    <div class = "container_new">
+                        <div class = "image_container">
+                            <img src = "{% static 'rooms/media/new_hermitage_1.jpg' %}" class = "image" alt = "">
+                        </div>
+    
+                        <div class = "title_and_text_wrapper">
+                            <div class = "title_wrapper">
+                                <span class = "title_new_hermitage">
+                                    NEW HERMITAGE
+                                </span>
+                            </div>
+    
+                            <div class = "line_hor_new"></div>
+                            
+                            <div class = "text_wrapper">
+                                <div class = "line_ver_new"></div>
+    
+                                <span class = "text_new_hermitage">
+                                        The New Hermitage Museum was opened in Saint Petersburg, Russia, on December 17, 2019. 
+                                        The museum is a joint project of the Hermitage Foundation and the St. Petersburg State Museum Institution. 
+                                        It houses more than 300,000 items, including paintings, sculptures, furniture, and decorative arts. 
+                                        The New Hermitage is located in the historical building of the former Winter Palace, 
+                                        which was rebuilt and renovated to house the museum. The museum offers a variety of exhibitions, 
+                                        educational programs, and cultural events for visitors of all ages.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+    
+            <!-- OLD HERMITAGE -->
+            <section>
+                <div class = "container_wrapper_winter">
+                    <div class = "container_winter">
+                        <div class = "title_and_text_wrapper">
+                            <div class = "title_wrapper_old">
+                                <span class = "title_old_hermitage">
+                                    OLD HERMITAGE
+                                </span>
+                            </div>
+    
+                            <div class = "line_hor_old"></div>
+                            
+                            <div class = "text_wrapper">
+                                <div class = "line_ver_old"></div>
+    
+                                <span class = "text_old_hermitage">
+                                    The Old Hermitage Museum was founded in St. Petersburg in 1815 and has since become one of
+                                    the oldest and most important museums in Russia. The collection of the museum includes paintings,
+                                    sculptures, artifacts, and more from various cultures and eras. During World War II, the museum
+                                    suffered significant damage from bombing and fire, but the collection was saved and preserved.
+                                    Today, the museum continues to attract millions of visitors from around the world and
+                                    offers a variety of educational programs and exhibitions.
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class = "image_container">
+                            <img src = "{% static 'rooms/media/old_hermitage_2.jpg' %}" class = "image_old" alt = "">
+                        </div>
+    
+                    </div>
+                </div>
+                
+            </section>
+    
+            <!-- ABOUT US -->
+            <section>
+                <div class = "container_company">
+    
+    
+                    <span class = "text_company">
+                        <span class = "title_company">
+                            ABOUT US
+                        </span>
+
+                        <div class = "line_wrapper">
+                            <div class = "line_about_us"></div>
+                        </div>
+
+                        <p></p>
+                        Hermitage Guide is a company that specializes in creating audio guides for the paintings of the Hermitage Museum
+                        in Saint Petersburg. The company was founded in 2023 and has since become one of the leaders in this field.
+                        Hermitage Guide offers its customers high-quality audio guides that help them better understand and enjoy the works of
+                        art displayed at the Hermitage. The company partners with professional guides and experts who provide information about
+                        each work of art, helping visitors better understand its history and significance. The Hermitage Guide company strives to provide
+                        its customers with a unique experience of visiting the Hermitage that will be memorable and interesting. They do everything
+                        possible to ensure their customers with high-quality information and create an unforgettable experience from visiting this
+                        beautiful museum. 
+                    </span>
+                </div>
+            </section>
+
+            <script src = "{% static 'rooms/media/js/about.js' %}"></script>
+    </body>
+</html>
