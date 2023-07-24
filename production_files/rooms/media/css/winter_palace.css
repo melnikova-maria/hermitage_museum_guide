@@ -154,7 +154,7 @@ body
         height: 9%;
         top: 0px;
         position: fixed;
-        z-index: 3;
+        z-index: 22;
         transition: top 0.6s;
     }
 
@@ -344,6 +344,7 @@ body
         border-bottom: 2px solid #ffffff;
     }
 
+/***************  секция 1 ***************/
 section
     {
         width: 100%;
@@ -361,7 +362,6 @@ section
         background: linear-gradient(to top, #151515, #151515f4, #15151578, #15151500);
     }
 
-/***************  секция 1 ***************/
 .container_sec_1, .container_sec_2 
     {
         display: grid;
@@ -705,7 +705,7 @@ section
 
 .card_1:hover .card_1_info.info_1, .card_2:hover .card_2_info.info_1
     {
-        right: 71%;
+        right: 65%;
         transition-delay: 100ms;
     }
 
@@ -849,25 +849,99 @@ section
         transition-delay: 100ms;
     }
 
-/***************  нижняя панель  ***************/
-.final_bar
+/***************  предложения  ***************/
+.feedback_button
     {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        margin-bottom: 40px;
-        margin-left: 30px;
-        width: 100%;
-        height: 10%;
-        bottom: 0px;
         position: fixed;
+        left: -76px;
+        top: 45%;
+        height: 50px;
+        width: 200px;
+        transform: rotate(-90deg);
+        border: solid 1px #CCCCCC;
+        background: #ffffff00;
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: lighter;
+        text-align: center;
+        line-height: 45px;
+        cursor: pointer;
+        z-index: 21;
+        transition: left 2s ease-in-out;
+        animation: text 5s 1;
     }
 
-.final_bar img
+.side_nav
+    {
+        position: fixed;
+        height: 99.9%;
+        width: 49.3%;
+        top: 0;
+        left: -49.3%;
+        background-color: #191919;
+        border: solid 2px #cccccc7b;
+        overflow-x: hidden;
+        padding-left: 110px;
+        padding-top: 10%;
+        z-index: 21;
+        transition: 2s ease-in-out;
+    }
+
+.side_nav a
+    {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+    }
+
+.side_nav .close_btn
     {
         position: absolute;
-        filter: brightness(70%);
-        animation: text 5s 1;
+        top: 70px;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+.title_feedback
+    {
+        color: #ffffff;
+        font-size: 57px;
+    }
+
+.title_feedback p
+    {
+        font-size: 25px;
+        font-weight: lighter;
+        line-height: 70px;
+    }
+
+.feedback_form
+    {
+        margin-top: 51px;
+        margin-bottom: 76px;
+        padding: 20px;
+        width: 93%;
+        height: 200px;
+        border: solid 1px #CCCCCC;
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0);
+        font-size: 22px;
+        font-weight: lighter;
+    }
+
+.feedback_send
+    {
+        margin-bottom: 10px;
+        height: 50px;
+        width: 200px;
+        border: solid 1px #CCCCCC;
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0);
+        font-size: 22px;
+        font-weight: lighter;
     }
 
 /***************  анимация  ***************/

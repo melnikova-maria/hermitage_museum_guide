@@ -145,3 +145,16 @@ window.onscroll = function()
             document.querySelector(".intro_bar").style.top = "-70px";
         prevScrollpos = currentScrollPos;
     }
+
+function open_nav()
+    {
+        document.getElementById("my_side_nav").style.left = "0%";
+        document.getElementById("my_button").style.left = "-2%";
+        document.getElementById("my_button").style.cursor = "auto";
+    }
+
+function close_nav()
+    {
+        document.getElementById("my_side_nav").style.left = "-49.3%";
+        document.getElementById("my_button").style.left = "-76px";
+    }

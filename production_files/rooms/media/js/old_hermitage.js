@@ -82,9 +82,12 @@ let section_height = section.offsetHeight;
 
 
 window.addEventListener('scroll', () => {
+    
     let scroll = window.pageYOffset;
     let sectionY = section.getBoundingClientRect();
 
+    console.log(111)
+    
     card_1.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -180 + 100}px)`; // ваза 1 двигается вверх
     card_3.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -180 + 100}px)`; // ваза 3 двигается вверх
 
@@ -126,4 +129,17 @@ window.onscroll = function()
         else
             document.querySelector(".intro_bar").style.top = "-70px";
         prevScrollpos = currentScrollPos;
+    }
+
+function open_nav()
+    {
+        document.getElementById("my_side_nav").style.left = "0%";
+        document.getElementById("my_button").style.left = "-2%";
+        document.getElementById("my_button").style.cursor = "auto";
+    }
+
+function close_nav()
+    {
+        document.getElementById("my_side_nav").style.left = "-49.3%";
+        document.getElementById("my_button").style.left = "-76px";
     }
