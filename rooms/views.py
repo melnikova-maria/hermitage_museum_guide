@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 from .models import comment
 
+
 # Create your views here.
 
 def home(request):
@@ -19,12 +20,6 @@ def about(request):
 
 def contacts(request):    
     template = loader.get_template('rooms/contacts.html')
-    context = {}
-    return HttpResponse(template.render(context, request))
-
-
-def login(request):
-    template = loader.get_template('rooms/login.html')
     context = {}
     return HttpResponse(template.render(context, request))
 

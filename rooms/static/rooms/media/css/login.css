@@ -150,6 +150,15 @@ section .container .forma .input_bx input
         animation: text 5s 1;
     }
 
+.in button, .reg button
+    {
+        color: rgba(0, 0, 0, 0.62);
+        font-size: 26px;
+        text-decoration: none;
+        border: 0;
+        background-color: rgba(28,28,28,0)
+    }
+
 .in:before
     {
         content: '';
