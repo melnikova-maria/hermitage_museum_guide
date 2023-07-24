@@ -70,12 +70,21 @@
                     </ul>
                 </div>
 
+                {% if user.is_authenticated %}
+                <div class = "intro_login">
+                    <span class = "login">
+                        <a href = "accounts/logout/"> Log out </a>
+                    </span>                    
+                </div>         
+                {% else %}
                 <!-- регистрация -->
                 <div class = "intro_login">
                     <span class = "login">
                         <a href = "/login"> Login </a>
                     </span>                    
                 </div>
+                {% endif %}
+
 
                 <!-- поиск -->
                 <!-- <div class = "intro_search">
