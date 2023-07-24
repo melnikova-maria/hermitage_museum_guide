@@ -3,6 +3,7 @@
     <head>
         <meta name = "viewport" content = "width=device-width, initial-scale=1">
         <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/winter_palace.css' %}">
+        <link rel = "shortcut icon" type = "image/jpg" href = "{% static 'rooms/media/web_icon.jpg' %}">
         <title> Winter palace </title>
     </head>
     
@@ -44,11 +45,18 @@
 
             <div class = "intro_bar">
 
-                <!-- регистрация -->
-                <div class = "intro_login">
-                    <span class = "login">
-                        <a href = "/login"> Login </a>
-                    </span>                    
+                <!-- переход на домашнюю страницу -->
+                <div class = "home">
+                    <a href = "/" class = "h"> H </a> <div class = "e"> E </div> <div class = "r"> R </div>
+                    <div class = "m"> M </div> <div class = "i"> I </div> <div class = "t"> T </div>
+                    <div class = "a"> A </div> <div class = "g"> G </div> <div class = "ee"> E &nbsp; </div>
+
+                    <div class = "mm"> M </div> <div class = "u"> U </div> <div class = "s"> S </div>
+                    <div class = "eee"> E </div> <div class = "uu"> U </div> <div class = "mmm"> M </div>
+                </div>
+
+                <div class = "home_dot">
+                    <div class="dot"> . </div>
                 </div>
 
                 <!-- навигация -->
@@ -62,13 +70,20 @@
                     </ul>
                 </div>
 
+                <!-- регистрация -->
+                <div class = "intro_login">
+                    <span class = "login">
+                        <a href = "/login"> Login </a>
+                    </span>                    
+                </div>
+
                 <!-- поиск -->
-                <div class = "intro_search">
+                <!-- <div class = "intro_search">
                     <div class = "search_box">
                         <button class = "btn_search"></button>
                         <input class = "input_search" placeholder = " Type to search...">
                     </div>
-                </div>
+                </div> -->
 
                 <div id = "arrow"> <br> SCROLL <br> </div>
 
@@ -80,7 +95,7 @@
                 <div class = "slide active">
                     <img src = "{% static 'rooms/media/winter_palace/win_slide_1.jpg' %}" alt="">
                     <div class = "info">
-                        <span class = "title_soon">
+                        <span class = "title_soon_ya">
                             SOON Fedor Yakovlevich Alekseev
                             <p>
                                 Fedor Alexeev’s painting “View of Moscow. Educational Home” depicts the educational building located on the banks of the river
@@ -98,7 +113,7 @@
                 <div class = "slide">
                     <img src = "{% static 'rooms/media/winter_palace/win_slide_2.jpg' %}" alt="">
                     <div class = "info">
-                        <span class = "title_soon">
+                        <span class = "title_soon_ba">
                             SOON Balthasar van der Ast
                             <p>
                                 Balthasar van der Ast is a Dutch painter who specialized in still life paintings. His work is characterized by vibrant colors,
@@ -115,7 +130,7 @@
                 <div class = "slide">
                     <img src = "{% static 'rooms/media/winter_palace/win_slide_3.jpg' %}" alt="">
                     <div class = "info">
-                        <span class = "title_soon">
+                        <span class = "title_soon_hr">
                             SOON Hubert Robert
                             <p>
                                 Hubert Robert is a French landscape painter known for his beautiful and serene paintings of rural landscapes.
@@ -133,7 +148,7 @@
                 <div class = "slide">
                     <img src = "{% static 'rooms/media/winter_palace/win_slide_4.jpg' %}" alt="">
                     <div class = "info">
-                        <span class = "title_soon">
+                        <span class = "title_soon_jh">
                             SOON Jacob Philipp Heckert
                             <p>
                                 Jacob Philipp Heckert is a German landscape painter who is known for his lush and naturalistic landscapes.
@@ -150,7 +165,7 @@
                 <div class = "slide">
                     <img src = "{% static 'rooms/media/winter_palace/win_slide_5.jpg' %}" alt="">
                     <div class = "info">
-                        <span class = "title_soon">
+                        <span class = "title_soon_lm">
                             SOON Luis Melendez
                             <p>
                                 Luis Melendez is a Spanish painter known for creating vibrant and colorful still-life paintings.

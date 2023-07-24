@@ -73,6 +73,7 @@ body
         bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
+        animation: text 5s 1;
     }
 
 .img-slider .navigation .btn
@@ -102,6 +103,7 @@ body
         top: 0px;
         margin-left: 8%;
         z-index: 2;
+        animation: text 5s 1;
     }
 
 .title
@@ -126,7 +128,7 @@ body
         margin-left: 14%;
     }
 
-.title_soon
+.title_soon_gorgon, .title_soon_laval, .title_soon_fish
     {
         color: #ffffff;
         opacity: 100%;
@@ -136,11 +138,12 @@ body
         animation: text 5s 1;
     }
 
-.title_soon p
+.title_soon_gorgon p, .title_soon_laval p, .title_soon_fish p
     {
         font-weight: lighter;
         line-height: 1.3;
         font-size: 22px;
+        animation: text 5s 1;
     }
 
 /***************  верхняя панель  ***************/
@@ -156,6 +159,7 @@ body
         position: fixed;
         z-index: 22;
         transition: top 0.6s;
+        animation: text 5s 1;
     }
 
 /***************  регистрация  ***************/
@@ -164,10 +168,10 @@ body
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         width: 4%;
         height: 100%;
-        margin-left: 13px;
+        right: 0px;
+        margin-right: 13px;
         cursor: pointer;
         position: absolute;
         z-index: 2;
@@ -175,7 +179,6 @@ body
 
 .login
     {
-        color: #ffffff;
         opacity: 100%;
         font-size: 25px;
         letter-spacing: 1.5px;
@@ -265,7 +268,7 @@ body
     }
 
 /***************  поиск  ***************/
-.intro_search
+/* .intro_search
     {
         display: flex;
         justify-content: right;
@@ -342,8 +345,9 @@ body
         border-radius: 0px;
         background-color: transparent;
         border-bottom: 2px solid #ffffff;
-    }
+    } */
 
+/***************  секция 1 ***************/
 section
     {
         width: 100%;
@@ -360,8 +364,7 @@ section
         z-index: 2;
         background: linear-gradient(to top, #151515, #151515f4, #15151578, #15151500);
     }
-
-/***************  секция 1 ***************/
+    
 .container_sec_1
     {
         margin-top: 13%;
@@ -839,6 +842,109 @@ section
         font-weight: lighter;
     }
 
+/*************** переход на домашнюю страницу ***************/
+.home, .home_dot
+    {
+        position: absolute;
+        display: flex;
+        justify-content: start;
+        margin-left: 13px;
+        width: 20%;
+        animation: text 5s 1;
+        z-index: 3;
+    }
+
+.home_dot
+    {
+        margin-left: 32px;
+        z-index: 4;
+    }
+
+.h, .e, .r, .m, .i, .t, .a, .g, .ee, .mm, .u, .s, .eee, .uu, .mmm, .dot
+    {
+        text-decoration: none;
+        color: #ffffff;
+        letter-spacing: 1.5px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+.e
+    {
+        animation: no 1.5s 8.9s 1 forwards;
+    }
+
+.r
+    {
+        animation: no 1.5s 8.6s 1 forwards;
+    }
+
+.m
+    {
+        animation: no 1.5s 8.3s 1 forwards;
+    }
+
+.i
+    {
+        animation: no 1.5s 8s 1 forwards;
+    }
+
+.t
+    {
+        animation: no 1.5s 7.7s 1 forwards;
+    }
+
+.a
+    {
+        animation: no 1.5s 7.4s 1 forwards;
+    }
+
+.g
+    {
+        animation: no 1.5s 7.1s 1 forwards;
+    }
+
+.ee
+    {
+        animation: no 1.5s 6.8s 1 forwards;
+    }
+
+.mm
+    {
+        animation: no 1.5s 6.5s 1 forwards;
+    }
+
+.u
+    {
+        animation: no 1.5s 6.2s 1 forwards;
+    }
+
+.s
+    {
+        animation: no 1.5s 5.9s 1 forwards;
+    }
+
+.eee
+    {
+        animation: no 1.5s 5.6s 1 forwards;
+    }
+
+.uu
+    {
+        animation: no 1.5s 5.3s 1 forwards;
+    }
+
+.mmm
+    {
+        animation: no 1.5s 5s 1 forwards;
+    }
+
+.dot
+    {
+        opacity: 0;
+        animation: text 1.5s 10s 1 forwards;
+    }
+
 /***************  анимация  ***************/
 
 @keyframes text
@@ -846,6 +952,24 @@ section
         0%
             {
                 opacity: 0%;
+            }
+
+        100%
+            {
+                opacity: 100%;
+            }
+    }
+
+@keyframes no
+    {
+        0%
+            {
+                opacity: 1;
+            }
+
+        100%
+            {
+                opacity: 0;
             }
     }
 

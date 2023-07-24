@@ -70,10 +70,14 @@ const card_2 = document.querySelector(".card_2");
 const card_3 = document.querySelector(".card_3");
 
 const title = document.querySelector(".title");
-const title_soon = document.querySelector(".title_soon")
+const navigation = document.querySelector(".navigation");
+
+const title_soon_bull = document.querySelector(".title_soon_bull");
+const title_soon_deer = document.querySelector(".title_soon_deer");
+const title_soon_panther = document.querySelector(".title_soon_panther");
+
 const intro = document.querySelector(".intro");
 const shadow = document.querySelector(".shadow");
-
 
 const arrows = document.getElementById("arrow");
 
@@ -91,8 +95,14 @@ window.addEventListener('scroll', () => {
     card_1.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -180 + 100}px)`; // ваза 1 двигается вверх
     card_3.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -180 + 100}px)`; // ваза 3 двигается вверх
 
+    // исчезание надписей с начальной секции при прокрутке
     title.style.opacity = - scroll / (intro_height / 4) + 1;
-    title_soon.style.opacity = - scroll / (intro_height / 4) + 1;
+    navigation.style.opacity = - scroll / (intro_height / 4) + 1;
+
+    title_soon_bull.style.opacity = - scroll / (intro_height / 4) + 1;
+    title_soon_deer.style.opacity = - scroll / (intro_height / 4) + 1;
+    title_soon_panther.style.opacity = - scroll / (intro_height / 4) + 1;
+
     shadow.style.height = `${scroll * 0.5 + 200}px`;
 
     // затемнение (то есть появление) элементов при прокрутке
@@ -131,6 +141,7 @@ window.onscroll = function()
         prevScrollpos = currentScrollPos;
     }
 
+// появление бокового меню по нажатии на кнопку
 function open_nav()
     {
         document.getElementById("my_side_nav").style.left = "0%";

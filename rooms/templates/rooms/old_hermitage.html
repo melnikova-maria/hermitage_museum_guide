@@ -4,6 +4,7 @@
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/old_hermitage.css' %}">
+            <link rel = "shortcut icon" type = "image/jpg" href = "{% static 'rooms/media/web_icon.jpg' %}">
             <title> Old Hermitage </title>
     </head>
     
@@ -45,11 +46,18 @@
 
             <div class = "intro_bar">
 
-                <!-- регистрация -->
-                <div class = "intro_login">
-                    <span class = "login">
-                        <a href = "/login"> Login </a>
-                    </span>                    
+                <!-- переход на домашнюю страницу -->
+                <div class = "home">
+                    <a href = "/" class = "h"> H </a> <div class = "e"> E </div> <div class = "r"> R </div>
+                    <div class = "m"> M </div> <div class = "i"> I </div> <div class = "t"> T </div>
+                    <div class = "a"> A </div> <div class = "g"> G </div> <div class = "ee"> E &nbsp; </div>
+
+                    <div class = "mm"> M </div> <div class = "u"> U </div> <div class = "s"> S </div>
+                    <div class = "eee"> E </div> <div class = "uu"> U </div> <div class = "mmm"> M </div>
+                </div>
+
+                <div class = "home_dot">
+                    <div class="dot"> . </div>
                 </div>
 
                 <!-- навигация -->
@@ -63,13 +71,20 @@
                     </ul>
                 </div>
 
+                <!-- регистрация -->
+                <div class = "intro_login">
+                    <span class = "login">
+                        <a href = "/login"> Login </a>
+                    </span>                    
+                </div>
+
                 <!-- поиск -->
-                <div class = "intro_search">
+                <!-- <div class = "intro_search">
                     <div class = "search_box">
                         <button class = "btn_search"></button>
                         <input class = "input_search" placeholder = " Type to search...">
                     </div>
-                </div>
+                </div> -->
 
                 <div id = "arrow"> <br> SCROLL <br> </div>
             </div>
@@ -78,7 +93,7 @@
                 <div class = "slide active">
                     <img src = "{% static 'rooms/media/old_hermitage/slide_1.jpg' %}" alt="">
                     <div class = "info">
-                        <span class = "title_soon">
+                        <span class = "title_soon_bull">
                             SOON The Sculptural Figure Of A Bull
                             <p>
                                 The sculptural figures of bulls are important archeological finds that date back to the early fourth millennium B.C. They are made
@@ -94,7 +109,7 @@
                 <div class = "slide">
                     <img src = "{% static 'rooms/media/old_hermitage/slide_2.jpg' %}" alt="">
                     <div class = "info">
-                        <span class = "title_soon">
+                        <span class = "title_soon_deer">
                             SOON The Stamped Deer Plate
                             <p>
                                 The stamped deer plate is a gold-made artefact discovered during archeological digs in the end of 7th c. BC. It measures
@@ -107,7 +122,7 @@
                 <div class = "slide">
                     <img src = "{% static 'rooms/media/old_hermitage/slide_3.jpg' %}" alt="">
                     <div class = "info">
-                        <span class = "title_soon">
+                        <span class = "title_soon_panther">
                             SOON The Stamped Panther Plate
                             <p>
                                 The stamped panther plate was found during excavations in 7th-century BC in the area of modern-day Turkey. It was made of gold and
@@ -210,7 +225,7 @@
         </section>
 
         <script src = "{% static 'rooms/media/js/old_hermitage.js' %}"></script>
-        <script>
+        <!-- <script>
             function open_nav()
                 {
                     document.getElementById("my_side_nav").style.left = "0%";
@@ -223,7 +238,7 @@
                     document.getElementById("my_side_nav").style.left = "-49.3%";
                     document.getElementById("my_button").style.left = "-76px";
                 }
-        </script>
+        </script> -->
     </body>
 </html>
       

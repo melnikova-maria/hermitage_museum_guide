@@ -3,18 +3,26 @@
     <head>
         <meta name = "viewport" content = "width=device-width, initial-scale=1">
         <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/contacts.css' %}">
+        <link rel = "shortcut icon" type = "image/jpg" href = "{% static 'rooms/media/web_icon.jpg' %}">
         <title> Contacts </title>
     </head>
 
     <body>
         <div class = "frame_up">
             <div class = "intro_bar">
-    
-                <!-- регистрация -->
-                <div class = "intro_login">
-                    <span class = "login">
-                        <a href = "/login"> Login </a>
-                    </span>                    
+
+                <!-- переход на домашнюю страницу -->
+                <div class = "home">
+                    <a href = "/" class = "h"> H </a> <div class = "e"> E </div> <div class = "r"> R </div>
+                    <div class = "m"> M </div> <div class = "i"> I </div> <div class = "t"> T </div>
+                    <div class = "a"> A </div> <div class = "g"> G </div> <div class = "ee"> E &nbsp; </div>
+
+                    <div class = "mm"> M </div> <div class = "u"> U </div> <div class = "s"> S </div>
+                    <div class = "eee"> E </div> <div class = "uu"> U </div> <div class = "mmm"> M </div>
+                </div>
+
+                <div class = "home_dot">
+                    <div class="dot"> . </div>
                 </div>
 
                 <!-- навигация -->
@@ -28,13 +36,20 @@
                     </ul>
                 </div>
 
+                <!-- регистрация -->
+                <div class = "intro_login">
+                    <span class = "login">
+                        <a href = "/login"> Login </a>
+                    </span>                    
+                </div>
+
                 <!-- поиск -->
-                <div class = "intro_search">
+                <!-- <div class = "intro_search">
                     <div class = "search_box">
                         <button class = "btn_search"></button>
                         <input class = "input_search" placeholder = " Type to search...">
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class = "frame_right"></div>
