@@ -23,12 +23,6 @@ def contacts(request):
     return HttpResponse(template.render(context, request))
 
 
-def login(request):
-    template = loader.get_template('rooms/login.html')
-    context = {}
-    return HttpResponse(template.render(context, request))
-
-
 def new_hermitage(request):
     template = loader.get_template('rooms/new_hermitage.html')
     context = {}

@@ -57,7 +57,8 @@ ROOT_URLCONF = 'hermitage_guide.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'rooms/templates/', 
+        'DIRS': [BASE_DIR / 'rooms/templates/',
+                 BASE_DIR / 'rooms/templates/rooms', 
                  BASE_DIR / 'auth/templates/',],
         'APP_DIRS': True,
         'OPTIONS': {
