@@ -8,6 +8,7 @@
     </head>
     
     <body>
+        {% if user.is_authenticated %}
         <div id = "my_side_nav" class = "side_nav">
             <a href = "javascript:void(0)" class = "close_btn" onclick = "close_nav()"> &times; </a>
             <!-- заголовок -->
@@ -29,11 +30,12 @@
             <span class = "title_feedback">
                 <p> Thank You! </p>
             </span>
-        </div>
+        </div>        
 
         <span id = "my_button" class = "feedback_button" onclick = "open_nav()">
             Your suggestions
         </span>
+        {% endif %}
 
         <div class = "intro">
 
@@ -73,7 +75,7 @@
                 {% if user.is_authenticated %}
                 <div class = "intro_login">
                     <span class = "login">
-                        <a href = "accounts/logout/"> Log out </a>
+                        <a href = "/accounts/logout/"> Logout </a>
                     </span>                    
                 </div>         
                 {% else %}
