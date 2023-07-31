@@ -76,17 +76,13 @@ section .container .title
 
 section .container .forma .input_bx
     {
-        margin-bottom: 6%;
+        margin-bottom: 1%;
         width: 0%;
-
-        -webkit-animation: title 4s;
-        -moz-animation:    title 4s; 
-        -o-animation:      title 4s; 
-        animation:         title 4s;
+        animation: title 4s;
         animation-fill-mode: forwards;
     }
 
-section .container .forma .input_bx span
+section .container .forma label
     {
         display: inline-block;
         color: rgba(0, 0, 0, 0.62);
@@ -110,17 +106,35 @@ section .container .forma .input_bx input
         animation: text 5s 1;
     }
 
+small
+    {
+        color: rgb(121, 121, 121);
+        margin-bottom: 3%;
+        animation: text 5s 1;
+    }
+
+small ul
+    {
+        margin-top: 0%;
+        padding-left: 3.2%;
+    }
+
+p
+    {
+        margin-bottom: 30px;
+    }
+
 /***************  кнопки входа и регистрации  ***************/
 .in_or_reg_wrapper
     {
         display: flex;
         align-items: center;
         width: 100%;
-        height: 15%;
+        height: 8%;
         position: relative;
     }
 
-.in, .reg
+.in
     {
         display: flex;
         justify-content: left;
@@ -130,33 +144,15 @@ section .container .forma .input_bx input
         position: absolute;
     }
 
-.in ul, .reg ul
+.in button
     {
-        padding-inline-start: 0px;
-    }
-
-.in ul li, .reg ul li
-    {
-        list-style: none;
-        position: relative;
-    }
-
-.in ul li a, .reg ul li a
-    {
-        text-decoration: none;
-        color: rgba(0, 0, 0, 0.62);
-        font-size: 26px;
-        cursor: pointer;
-        animation: text 5s 1;
-    }
-
-.in button, .reg button
-    {
+        padding: 0px;
         color: rgba(0, 0, 0, 0.62);
         font-size: 26px;
         text-decoration: none;
         border: 0;
-        background-color: rgba(28,28,28,0)
+        background-color: rgba(28,28,28,0);
+        animation: text 5s 1;
     }
 
 .in:before
@@ -169,28 +165,12 @@ section .container .forma .input_bx input
         width: 0%;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
         transition: 2s;
+        animation: text 5s 1;
     }
 
-.in:hover:before, .reg:hover:before
+.in:hover:before
     {
         width: 100%;
-    }
-
-.reg
-    {
-        justify-content: right;
-        left: 50%;
-    }
-
-.reg:before
-    {
-        content: '';
-        position: absolute;
-        right: 0%;
-        bottom: -3px;
-        width: 0%;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        transition: 2s;
     }
 
 /***************  анимация  ***************/
@@ -206,7 +186,7 @@ section .container .forma .input_bx input
     {
         0%
             {
-                opacity: 0%;
+                opacity: 0;
             }
     }
 

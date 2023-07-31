@@ -111,7 +111,7 @@ body
         padding-bottom: 10px;
         margin: 0;
         color: #ffffff;
-        opacity: 100%;
+        opacity: 1;
         font-size: 60px;
         animation: text 5s 1;
     }
@@ -132,7 +132,7 @@ body
 .title_soon_ya, .title_soon_ba, .title_soon_hr, .title_soon_jh, .title_soon_lm
     {
         color: #ffffff;
-        opacity: 100%;
+        opacity: 1;
         font-size: 25px;
         line-height: 2;
         letter-spacing: 1.3;
@@ -163,38 +163,44 @@ body
         animation: text 5s 1;
     }
 
-/***************  регистрация  ***************/
-.intro_login
+/***************  вход/выход  ***************/
+.intro_login, .intro_logout
     {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 4%;
+        width: 5%;
         height: 100%;
         right: 0px;
-        margin-right: 13px;
+        margin-right: 25px;
         cursor: pointer;
         position: absolute;
         z-index: 2;
     }
 
+    .intro_logout
+    {
+        width: 6%;
+    }
+
 .login
     {
-        opacity: 100%;
+        opacity: 1;
         font-size: 25px;
         letter-spacing: 1.5px;
+        text-align: center;
     }
 
 .login a
     {
         text-decoration: none;
-        color: #ffffff;
         font-size: 25px;
         letter-spacing: 1.5px;
+        color: #ffffff;
         animation: text 5s 1;
     }
 
-.intro_login:before 
+.intro_login:before, .intro_logout:before
     {
         content: '';
         position: absolute;
@@ -207,7 +213,7 @@ body
         animation: text 5s 1;
     }
 
-.intro_login:hover:before
+.intro_login:hover:before, .intro_logout:hover:before
     {
         transform: scale(1);
     }
@@ -325,7 +331,7 @@ body
         color: #ffffff;
         background-color: rgba(255, 255, 255, 0);
         border: 2.5px solid;
-        opacity: 100%;
+        opacity: 1;
         font-size: 16px;
         font-weight: bold;
         position: absolute;
@@ -1063,12 +1069,12 @@ section
     {
         0%
             {
-                opacity: 0%;
+                opacity: 0;
             }
 
         100%
             {
-                opacity: 100%;
+                opacity: 1;
             }
     }
 

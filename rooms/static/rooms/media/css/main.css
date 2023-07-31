@@ -1,4 +1,4 @@
- *
+*
     {
         padding: 0px;
         margin: 0px;
@@ -29,7 +29,7 @@ body
         filter: brightness(70%);
         width: 100%;
         height: 110%;
-        animation: video 3s 1;
+        animation: video 2.5s 1;
     }
 
 /***************  заголовок и линия  ***************/
@@ -49,21 +49,17 @@ body
     {
         padding-bottom: 10px;
         margin: 0;
-        opacity: 100%;
+        opacity: 1;
         font-size: 60px;
         text-align: center;
-        animation: text 5s 1;
+        animation: text 5.5s 1;
     }
 
 .line
     {   
         width: 0px;
         border-bottom: 3px solid #ffffff;
-        
-        -webkit-animation: title 5s;
-        -moz-animation:    title 5s; 
-        -o-animation:      title 5s; 
-        animation:         title 5s, text 4s 1;
+        animation: title 5.5s, text 5.5s 1;
         animation-fill-mode: forwards;
     }
 
@@ -78,16 +74,16 @@ body
         height: 9%;
         top: 0px;
         position: absolute;
-        animation: text 5s 1;
+        animation: text 5.5s 1;
     }
 
-/***************  регистрация  ***************/
-.intro_login
+/***************  вход/выход  ***************/
+.intro_login, .intro_logout
     {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 4%;
+        width: 5%;
         height: 100%;
         right: 0px;
         margin-right: 25px;
@@ -96,11 +92,17 @@ body
         z-index: 2;
     }
 
+.intro_logout
+    {
+        width: 6%;
+    }
+
 .login
     {
-        opacity: 100%;
+        opacity: 1;
         font-size: 25px;
         letter-spacing: 1.5px;
+        text-align: center;
     }
 
 .login a
@@ -109,10 +111,9 @@ body
         font-size: 25px;
         letter-spacing: 1.5px;
         color: #ffffff;
-        animation: text 5s 1;
     }
 
-.intro_login:before 
+.intro_login:before, .intro_logout:before
     {
         content: '';
         position: absolute;
@@ -124,7 +125,7 @@ body
         transform: scaleX(0);
     }
 
-.intro_login:hover:before
+.intro_login:hover:before, .intro_logout:hover:before
     {
         transform: scale(1);
     }
@@ -165,7 +166,6 @@ body
         letter-spacing: 1.5px;
         text-align: center;
         color: #ffffff;
-        animation: text 5s 1;
     }
 
 .intro_navigation ul li:before 
@@ -192,7 +192,6 @@ body
         justify-content: start;
         margin-left: 13px;
         width: 20%;
-        animation: text 5s 1;
         z-index: 3;
     }
 
@@ -213,78 +212,78 @@ body
 
 .e
     {
-        animation: no 1.5s 8.9s 1 forwards;
+        animation: no 1.5s 7.9s 1 forwards;
     }
 
 .r
     {
-        animation: no 1.5s 8.6s 1 forwards;
+        animation: no 1.5s 7.6s 1 forwards;
     }
 
 .m
     {
-        animation: no 1.5s 8.3s 1 forwards;
+        animation: no 1.5s 7.3s 1 forwards;
     }
 
 .i
     {
-        animation: no 1.5s 8s 1 forwards;
+        animation: no 1.5s 7s 1 forwards;
     }
 
 .t
     {
-        animation: no 1.5s 7.7s 1 forwards;
+        animation: no 1.5s 6.7s 1 forwards;
     }
 
 .a
     {
-        animation: no 1.5s 7.4s 1 forwards;
+        animation: no 1.5s 6.4s 1 forwards;
     }
 
 .g
     {
-        animation: no 1.5s 7.1s 1 forwards;
+        animation: no 1.5s 6.1s 1 forwards;
     }
 
 .ee
     {
-        animation: no 1.5s 6.8s 1 forwards;
+        animation: no 1.5s 5.8s 1 forwards;
     }
 
 .mm
     {
-        animation: no 1.5s 6.5s 1 forwards;
+        animation: no 1.5s 5.5s 1 forwards;
     }
 
 .u
     {
-        animation: no 1.5s 6.2s 1 forwards;
+        animation: no 1.5s 5.2s 1 forwards;
     }
 
 .s
     {
-        animation: no 1.5s 5.9s 1 forwards;
+        animation: no 1.5s 4.9s 1 forwards;
     }
 
 .eee
     {
-        animation: no 1.5s 5.6s 1 forwards;
+        animation: no 1.5s 4.6s 1 forwards;
     }
 
 .uu
     {
-        animation: no 1.5s 5.3s 1 forwards;
+        animation: no 1.5s 4.3s 1 forwards;
     }
 
 .mmm
     {
-        animation: no 1.5s 5s 1 forwards;
+        animation: no 1.5s 4s 1 forwards;
     }
 
 .dot
     {
         opacity: 0;
-        animation: text 1.5s 10s 1 forwards;
+        animation: text 1.5s 9s 1 forwards;
     }
 
 /***************  поиск  ***************/
@@ -341,7 +340,7 @@ body
         pointer-events: painted;
         background-color: rgba(255, 255, 255, 0);
         border: 2.5px solid;
-        opacity: 100%;
+        opacity: 1;
         font-size: 16px;
         font-weight: bold;
         position: absolute;
@@ -369,12 +368,12 @@ body
     {
         0%
             {
-                opacity: 0%;
+                opacity: 0;
             }
 
         100%
             {
-                opacity: 100%;
+                opacity: 1;
             }
     }
 

@@ -1,9 +1,9 @@
 {% load static %}
 <html>
   <head>
-    <meta name = "viewport" content = "width=device-width, initial-scale=1">
-    <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/signup.css' %}">
-    <title> Login </title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+    <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/sign_up.css' %}">
+    <title> Sign Up </title>
   </head>
 
   <body>
@@ -11,27 +11,34 @@
         <div class = "image">
             <img src = "{% static 'rooms/media/login_image.jpg' %}">
         </div>
-        <div class="container">
+        <div class = "container">
+
+            <!-- заголовок -->
             <span class = "title">
                 Sign Up
             </span>
-            <div class="forma">
-                <form method="post">
+
+            <!-- форма регистрации -->
+            <div class = "forma">
+                <form method = "post">
                     {% csrf_token %}
                     {% for field in form %}
-                        <div class="input_bx">
-                            {{ field.label_tag }}
+                        {{ field.label_tag }}
+                        <div class = "input_bx">
                             {{ field }}
-                            {% if field.help_text %}
-                                <small style="color: grey">{{ field.help_text }}</small>
-                            {% endif %}                         
                         </div>
+                        {% if field.help_text %}
+                            <small> {{ field.help_text }} </small>
+                        {% endif %}
+                    <p></p>
                     {% endfor %}
+
                     <div class = "in_or_reg_wrapper">
                         <div class = "in">
-                          <button type="submit">Sign Up</button>
+                          <button type = "submit"> Sign Up </button>
                         </div>
                     </div>
+
                 </form>
             </div>
         </div>

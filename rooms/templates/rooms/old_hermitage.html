@@ -1,42 +1,40 @@
 {% load static %}
 <html lang = "en" dir = "ltr">
     <head>
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/old_hermitage.css' %}">
-            <link rel = "shortcut icon" type = "image/jpg" href = "{% static 'rooms/media/web_icon.jpg' %}">
-            <title> Old Hermitage </title>
+        <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/old_hermitage.css' %}">
+        <link rel = "shortcut icon" type = "image/jpg" href = "{% static 'rooms/media/web_icon.jpg' %}">
+        <title> Old Hermitage </title>
     </head>
     
     <body>
         {% if user.is_authenticated %}
-        <div id = "my_side_nav" class = "side_nav">
-            <a href = "javascript:void(0)" class = "close_btn" onclick = "close_nav()"> &times; </a>
-            <!-- заголовок -->
-            <span class = "title_feedback">
-                Hi there, text us!
-                <p>
-                    We would be happy to see your suggestions for improving our guide.
-                </p>
-            </span>
-                        
-            <div> 
-                <form action = "" method = "POST">
-                    {% csrf_token %}
-                    <textarea name = "text" class = "feedback_form"></textarea>
-                    <button type = "submit" class = "feedback_send"> Send </button>
-                </form>
+            <div id = "my_side_nav" class = "side_nav">
+                <a href = "javascript:void(0)" class = "close_btn" onclick = "close_nav()"> &times; </a>
+                <!-- заголовок -->
+                <span class = "title_feedback">
+                    Hi there, text us!
+                    <p>
+                        We would be happy to see your suggestions for improving our guide.
+                    </p>
+                </span>
+                            
+                <div> 
+                    <form action = "" method = "POST">
+                        {% csrf_token %}
+                        <textarea name = "text" class = "feedback_form"></textarea>
+                        <button type = "submit" class = "feedback_send"> Send </button>
+                    </form>
+                </div>
+
+                <span class = "title_feedback">
+                    <p> Thank You! </p>
+                </span>
             </div>
 
-            <span class = "title_feedback">
-                <p> Thank You! </p>
+            <span id = "my_button" class = "feedback_button" onclick = "open_nav()">
+                Your suggestions
             </span>
-        </div>
         {% endif %}
-
-        <span id = "my_button" class = "feedback_button" onclick = "open_nav()">
-            Your suggestions
-        </span>
         
         <div class = "intro">
 
@@ -60,7 +58,7 @@
 
                 <div class = "home_dot">
                     <div class="dot"> . </div>
-                </div>                
+                </div>
 
                 <!-- навигация -->
                 <div class = "intro_navigation">
@@ -73,19 +71,19 @@
                     </ul>
                 </div>
 
+                <!-- вход/выход -->
                 {% if user.is_authenticated %}
-                <div class = "intro_login">
-                    <span class = "login">
-                        <a href = "/accounts/logout/"> Logout </a>
-                    </span>                    
-                </div>         
+                    <div class = "intro_logout">
+                        <span class = "login">
+                            <a href = "/accounts/logout/"> Log Out </a>
+                        </span>
+                    </div>
                 {% else %}
-                <!-- регистрация -->
-                <div class = "intro_login">
-                    <span class = "login">
-                        <a href = "/login"> Login </a>
-                    </span>                    
-                </div>
+                    <div class = "intro_login">
+                        <span class = "login">
+                            <a href = "/login"> Log In </a>
+                        </span>                    
+                    </div>
                 {% endif %}
 
 
@@ -164,13 +162,15 @@
                 <div class = "container">
                     <div class = "card_1">
 
-                        <div class = "card_1_info info_1">
-                            <span class = "info_text"> OTHER WORKS: Sarpedon Krater </span>
+                        {% if user.is_authenticated %}
+                            <div class = "card_1_info info_1">
+                                <span class = "info_text"> OTHER WORKS: Sarpedon Krater </span>
 
-                            <div class = "info_image_1">
-                                <img src = "{% static 'rooms/media/old_hermitage/card_1_1.jpg' %}" alt="">
+                                <div class = "info_image_1">
+                                    <img src = "{% static 'rooms/media/old_hermitage/card_1_1.jpg' %}" alt="">
+                                </div>
                             </div>
-                        </div>
+                        {% endif %}
 
                         <img src = "{% static 'rooms/media/old_hermitage/card_1.jpg' %}" class = "card_1_img" alt="">
                         
@@ -207,13 +207,15 @@
 
                     <div class = "card_3">
 
-                        <div class = "card_3_info info_1">
-                            <span class = "info_text"> RELATED: Zeus and Antiope </span>
+                        {% if user.is_authenticated %}
+                            <div class = "card_3_info info_1">
+                                <span class = "info_text"> RELATED: Zeus and Antiope </span>
 
-                            <div class = "info_image_3">
-                                <img src = "{% static 'rooms/media/old_hermitage/card_3_1.jpg' %}" alt="">
+                                <div class = "info_image_3">
+                                    <img src = "{% static 'rooms/media/old_hermitage/card_3_1.jpg' %}" alt="">
+                                </div>
                             </div>
-                        </div>
+                        {% endif %}
 
                         <img src = "{% static 'rooms/media/old_hermitage/card_3.jpg' %}" class = "card_1_img" alt="">
                         
@@ -236,20 +238,6 @@
         </section>
 
         <script src = "{% static 'rooms/media/js/old_hermitage.js' %}"></script>
-        <!-- <script>
-            function open_nav()
-                {
-                    document.getElementById("my_side_nav").style.left = "0%";
-                    document.getElementById("my_button").style.left = "-2%";
-                    document.getElementById("my_button").style.cursor = "auto";
-                }
-
-            function close_nav()
-                {
-                    document.getElementById("my_side_nav").style.left = "-49.3%";
-                    document.getElementById("my_button").style.left = "-76px";
-                }
-        </script> -->
     </body>
 </html>
       

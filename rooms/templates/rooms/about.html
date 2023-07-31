@@ -1,7 +1,6 @@
 {% load static %}
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel = "stylesheet" type="text/css" href = "{% static 'rooms/media/css/about.css' %}">
         <link rel = "shortcut icon" type = "image/jpg" href = "{% static 'rooms/media/web_icon.jpg' %}">
         <title>About</title>
@@ -46,21 +45,20 @@
                     </ul>
                 </div>
 
-                <!-- регистрация -->
+                <!-- вход/выход -->
                 {% if user.is_authenticated %}
+                    <div class = "intro_logout">
+                        <span class = "login">
+                            <a href = "/accounts/logout/"> Log Out </a>
+                        </span>
+                    </div>
+                {% else %}
                     <div class = "intro_login">
                         <span class = "login">
-                            <a href = "/accounts/logout/"> Logout </a>
-                        </span>                    
-                    </div>         
-                    {% else %}
-                    <!-- регистрация -->
-                    <div class = "intro_login">
-                        <span class = "login">
-                            <a href = "/login"> Login </a>
+                            <a href = "/login"> Log In </a>
                         </span>                    
                     </div>
-                    {% endif %}
+                {% endif %}
 
 
                 <!-- поиск -->

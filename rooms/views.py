@@ -49,7 +49,6 @@ def old_hermitage(request):
     else:
         return render(request, 'rooms/old_hermitage.html', {})
 
-# эксперимент
 def winter_palace(request):
     if request.method == "POST":
         post = comment()
