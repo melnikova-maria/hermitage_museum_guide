@@ -35,6 +35,7 @@ body
         position: relative;
         max-height: 100%;
         overflow: hidden;
+        background-color: #151515;
     }
 
 .intro_image
@@ -47,7 +48,7 @@ body
         padding: 0px;
         margin: 0px;
         opacity: 100;
-        animation: text 3s 1;
+        animation: text 2.5s 1;
     }
     
 .intro_title 
@@ -61,7 +62,6 @@ body
         height: 60%;
         top: 0px;
         margin-left: 8%;
-        animation: text 5s 1;
     }
 
 .title
@@ -71,7 +71,7 @@ body
         color: #151515;
         opacity: 1;
         font-size: 60px;
-        animation: text 5s 1;
+        animation: text 5.5s 1;
     }
 
 /***************  верхняя панель  ***************/
@@ -85,9 +85,9 @@ body
         height: 9%;
         top: 0px;
         position: fixed;
-        z-index: 100;
+        z-index: 22;
         transition: top 0.6s;
-        animation: text 5s 1;
+        animation: text 5.5s 1;
     }
 
 /***************  вход/выход  ***************/
@@ -124,7 +124,6 @@ body
         font-size: 25px;
         letter-spacing: 1.5px;
         color: #151515;
-        animation: text 5s 1;
     }
 
 .intro_login:before, .intro_logout:before
@@ -137,7 +136,6 @@ body
         border-bottom: 2px solid #151515;
         transition: 1s;
         transform: scaleX(0);
-        animation: text 5s 1;
     }
 
 .intro_login:hover:before, .intro_logout:hover:before
@@ -180,7 +178,6 @@ body
         color: #151515;
         font-size: 25px;
         letter-spacing: 1.5px;
-        animation: text 5s 1;
     }
 
 .intro_navigation ul li:before 
@@ -190,12 +187,9 @@ body
         right: 15%;
         left: 15%;
         bottom: -5px;
-        border-bottom-width: 2px;
-        border-bottom-style: solid;
-        border-bottom-color: var(--color_border);
+        border-bottom: 2px solid #151515;
         transition: 1s;
         transform: scaleX(0);
-        animation: text 5s 1;
     }
 
 .intro_navigation ul li:hover:before
@@ -234,7 +228,7 @@ body
         color: var(--color_border);
         font-size: 20px;
         background-color: rgba(255, 255, 255, 0);
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
         border-bottom-width: 2px;
         border-bottom-style: solid;
         border-bottom-color: var(--color_border);
@@ -266,7 +260,6 @@ body
         font-size: 16px;
         font-weight: bold;
         position: absolute;
-        animation: text 5s 1;
     }
 
 .btn_search:focus ~ .input_search
@@ -611,7 +604,7 @@ section img
         text-align: center;
         font-weight: lighter;
         z-index: 100;
-        animation: text 5s 1;
+        animation: text 5.5s 1;
     }
 
 #arrow:before
@@ -634,7 +627,6 @@ section img
         justify-content: start;
         margin-left: 13px;
         width: 20%;
-        animation: text 5s 1;
         z-index: 3;
     }
 
@@ -655,81 +647,82 @@ section img
 
 .e
     {
-        animation: no 1.5s 8.9s 1 forwards;
+        animation: no 1.5s 7.9s 1 forwards;
     }
 
 .r
     {
-        animation: no 1.5s 8.6s 1 forwards;
+        animation: no 1.5s 7.6s 1 forwards;
     }
 
 .m
     {
-        animation: no 1.5s 8.3s 1 forwards;
+        animation: no 1.5s 7.3s 1 forwards;
     }
 
 .i
     {
-        animation: no 1.5s 8s 1 forwards;
+        animation: no 1.5s 7s 1 forwards;
     }
 
 .t
     {
-        animation: no 1.5s 7.7s 1 forwards;
+        animation: no 1.5s 6.7s 1 forwards;
     }
 
 .a
     {
-        animation: no 1.5s 7.4s 1 forwards;
+        animation: no 1.5s 6.4s 1 forwards;
     }
 
 .g
     {
-        animation: no 1.5s 7.1s 1 forwards;
+        animation: no 1.5s 6.1s 1 forwards;
     }
 
 .ee
     {
-        animation: no 1.5s 6.8s 1 forwards;
+        animation: no 1.5s 5.8s 1 forwards;
     }
 
 .mm
     {
-        animation: no 1.5s 6.5s 1 forwards;
+        animation: no 1.5s 5.5s 1 forwards;
     }
 
 .u
     {
-        animation: no 1.5s 6.2s 1 forwards;
+        animation: no 1.5s 5.2s 1 forwards;
     }
 
 .s
     {
-        animation: no 1.5s 5.9s 1 forwards;
+        animation: no 1.5s 4.9s 1 forwards;
     }
 
 .eee
     {
-        animation: no 1.5s 5.6s 1 forwards;
+        animation: no 1.5s 4.6s 1 forwards;
     }
 
 .uu
     {
-        animation: no 1.5s 5.3s 1 forwards;
+        animation: no 1.5s 4.3s 1 forwards;
     }
 
 .mmm
     {
-        animation: no 1.5s 5s 1 forwards;
+        animation: no 1.5s 4s 1 forwards;
     }
 
 .dot
     {
         opacity: 0;
-        animation: text 1.5s 10s 1 forwards;
+        animation: text 1.5s 9s 1 forwards;
     }    
 
 /***************  анимация  ***************/
+
 @keyframes text
     {
         0%

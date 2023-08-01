@@ -18,6 +18,7 @@ body
     {
         position: absolute;
         width: 100%;
+        filter: brightness(60%);
     }
     
 .intro_title 
@@ -49,7 +50,7 @@ body
 .info
     {
         position: absolute;
-        top: 300px;
+        top: 40%;
         left: 8%;
         font-size: 25px;
         animation: text 5s 1;

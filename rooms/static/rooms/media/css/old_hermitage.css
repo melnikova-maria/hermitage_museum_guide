@@ -1,4 +1,4 @@
-            *
+*
     {
         padding: 0px;
         margin: 0px;
@@ -430,7 +430,7 @@ section
         top: 0px;
         background-color: #151515;
         opacity: 0;
-        transition: opacity .5s .1s ease-in;
+        transition: opacity 0.5s .1s ease-in;
     }
 
 .grey_for_text_card_1, .grey_for_text_card_2, .grey_for_text_card_3
@@ -657,8 +657,15 @@ section
         line-height: 45px;
         cursor: pointer;
         z-index: 21;
-        transition: left 2s ease-in-out;
+        transition: left 2s ease-in-out, background 0.7s ease-in-out, color 0.7s ease-in-out;
         animation: text 5.5s 1;
+    }
+
+.feedback_button:hover
+    {
+        background: #15151580;
+        color: #ffffff;
+        transition: left 2s ease-in-out, background 0.7s ease-in-out, color 0.7s ease-in-out;
     }
 
 .side_nav
@@ -710,14 +717,15 @@ section
 
 .feedback_form
     {
-        margin-top: 51px;
+        margin-top: 48.5px;
         margin-bottom: 76px;
         padding: 20px;
         width: 93%;
         height: 200px;
         border: solid 1px #CCCCCC;
-        color: #ffffff;
         background: rgba(255, 255, 255, 0);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #ffffff;
         font-size: 22px;
         font-weight: lighter;
     }
@@ -728,8 +736,9 @@ section
         height: 50px;
         width: 200px;
         border: solid 1px #CCCCCC;
-        color: #ffffff;
         background: rgba(255, 255, 255, 0);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #ffffff;
         font-size: 22px;
         font-weight: lighter;
     }
