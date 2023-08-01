@@ -52,4 +52,4 @@ While on develop branch:
 - [mariya.melnikova](https://bmstu.codes/mariya.melnikova.2)
 
 
-![Logo](https://bmstu.codes/i.trushkov/hermitage_guide/-/blob/develop/logo.png)
+![Logo](https://bmstu.codes/i.trushkov/hermitage_guide/-/blob/8ea3b8c32386124e7ba80dbdbd75cd39b59db400/rooms/static/rooms/media/logo.png)
