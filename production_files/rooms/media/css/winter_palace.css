@@ -868,15 +868,14 @@ section
         line-height: 45px;
         cursor: pointer;
         z-index: 21;
-        transition: left 2s ease-in-out, background 0.7s ease-in-out, color 0.7s ease-in-out;
+        transition: left 2s ease-in-out, background 0.5s ease-in-out;
         animation: text 5.5s 1;
     }
 
 .feedback_button:hover
     {
         background: #15151580;
-        color: #ffffff;
-        transition: left 2s ease-in-out, background 0.7s ease-in-out, color 0.7s ease-in-out;
+        transition: left 2s ease-in-out, background 0.5s ease-in-out;
     }
 
 .side_nav
@@ -886,7 +885,7 @@ section
         width: 49.3%;
         top: 0;
         left: -49.3%;
-        background-color: #191919;
+        background-color: #1d1d1d;
         border: solid 2px #cccccc7b;
         overflow-x: hidden;
         padding-left: 110px;
@@ -952,6 +951,13 @@ section
         color: #ffffff;
         font-size: 22px;
         font-weight: lighter;
+        transition: background 0.5s ease-in-out;
+    }
+
+.feedback_send:hover
+    {
+        background: #0000008d;
+        transition: background 0.5s ease-in-out;
     }
 
 /*************** переход на домашнюю страницу ***************/

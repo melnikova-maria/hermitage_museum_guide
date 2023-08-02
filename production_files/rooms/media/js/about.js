@@ -61,74 +61,83 @@ window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
     let sectionY = section.getBoundingClientRect();
 
-    console.log("scroll", 222)
+    console.log("(scroll - 2904) / (section_height + sectionY.top + 2904) * 200 - 200", (scroll - 2904) / (section_height + sectionY.top + 2904) * 200 - 200);
     
 
 //--------WINTER PALACE--------//
-    if (scroll / (section_height + sectionY.top) * 200 - 200 <= 0)
+    if (scroll / (section_height + sectionY.top) * 200 - 200 >= -200 && scroll / (section_height + sectionY.top) * 200 - 200 <= 0)
         {
-            title_winter_palace.style.transform = `translateY(${scroll / (section_height + sectionY.top) * 200 - 200}px)`; // надпись WINTER PALACE двигается вниз
+            // надпись WINTER PALACE двигается вниз
+            title_winter_palace.style.transform = `translateY(${scroll / (section_height + sectionY.top) * 200 - 200}px)`;
             
-            line_hor.style.width = `${scroll / (sectionY.top + section_height) * 587}px`; // горизонтальная линия WINTER PALACE двигается вправо
-    //         // line_ver.style.backgroundColor = "#151515"; //темный
-        }
+            // горизонтальная линия WINTER PALACE двигается вправо
+            line_hor.style.width = `${scroll / (sectionY.top + section_height) * 90.5}%`;
 
-    if (scroll / (section_height + sectionY.top) * -200 + 200 >= 0)
-        text_winter_palace.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -200 + 220}px)`; // текст WINTER PALACE двигается вверх
+            // текст WINTER PALACE двигается вверх
+            text_winter_palace.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -200 + 190}px)`;
+
+            line_ver.style.backgroundColor = "#151515"; //темный
+        }
 
     // вертикальная линия WINTER PALACE двигается вниз
-    // if (scroll >= 968 && scroll <= 1666)
-    //     {
-    //         line_ver.style.height = `${(scroll - 968) / (sectionY.top + section_height) * 100}%`;
-    //         line_ver.style.backgroundColor = "#c4c4c4"; //светлый
-    //     }
+    if (scroll / (section_height + sectionY.top) * 200 - 200 >= 0 && (scroll - 968) / (section_height + sectionY.top + 968) * 200 - 200 <= 0)
+        {
+            line_ver.style.height = `${(scroll - 968) / (sectionY.top + section_height + 968) * 284}%`;
+            line_ver.style.backgroundColor = "#c4c4c4"; //светлый
+        }
 
 //--------NEW HERMITAGE--------//
-    if ((scroll - 968) / (section_height + sectionY.top + 968) * 190 - 170 >= -180 && (scroll - 968) / (section_height + sectionY.top + 968) * 190 - 170 <= 9)
+    if ((scroll - 968) / (section_height + sectionY.top + 968) * 200 - 200 >= -200 && (scroll - 968) / (section_height + sectionY.top + 968) * 200 - 200 <= 0)
         {
-            title_new_hermitage.style.transform = `translateY(${(scroll - 968) / (section_height + sectionY.top + 968) * 190 - 170}px)`; // надпись NEW HERMITAGE двигается вниз
+            // надпись NEW HERMITAGE двигается вниз
+            title_new_hermitage.style.transform = `translateY(${(scroll - 968) / (section_height + sectionY.top + 968) * 200 - 200}px)`;
 
-            line_hor_new.style.width = `${(scroll - 968) / (sectionY.top + section_height + 968) * 590}px`; // горизонтальная линия NEW HERMITAGE двигается влево
-            // line_ver_new.style.backgroundColor = "#151515";
+            // горизонтальная линия NEW HERMITAGE двигается влево
+            line_hor_new.style.width = `${(scroll - 968) / (sectionY.top + section_height + 968) * 32}%`;
+
+            // текст NEW HERMITAGE двигается вверх
+            text_new_hermitage.style.transform = `translateY(${(scroll - 968) / (section_height + sectionY.top + 968) * -200 + 190}px)`;
+
+            line_ver_new.style.backgroundColor = "#151515";
         }
-
-    if ((scroll - 968) / (section_height + sectionY.top + 968) * 190 - 170 >= -180 && (scroll - 968) / (section_height + sectionY.top + 968) * 190 - 170 <= 15)
-        text_new_hermitage.style.transform = `translateY(${(scroll - 968) / (section_height + sectionY.top + 968) * -180 + 170}px)`; // текст NEW HERMITAGE двигается вверх
 
     // вертикальная линия NEW HERMITAGE двигается вниз
-    // if (scroll >= 1938 && scroll <= 2632)
-    //     {
-    //         line_ver_new.style.height = `${(scroll - 1936) / (sectionY.top + section_height + 968) * 100}%`;
-    //         line_ver_new.style.backgroundColor = "#c4c4c4";
-    //     }
-
-//--------OLD HERMITAGE--------//
-    if ((scroll - 1936) / (section_height + sectionY.top + 1936) * 200 - 200 >= -220 && (scroll - 1936) / (section_height + sectionY.top + 1936) * 200 - 200 <= -44)
+    if ((scroll - 968) / (section_height + sectionY.top + 968) * 200 - 200 >= 0 && (scroll - 1936) / (section_height + sectionY.top + 1936) * 200 - 200 <= 0)
         {
-            title_old_hermitage.style.transform = `translateY(${(scroll - 1936) / (section_height + sectionY.top + 1936) * 255 - 200}px)`; // надпись OLD HERMITAGE двигается вниз
-
-            line_hor_old.style.width = `${(scroll - 1936) / (sectionY.top + section_height + 1936) * 725}px`; // горизонтальная линия OLD HERMITAGE двигается влево
-            // line_ver_old.style.backgroundColor = "#151515";
+            line_ver_new.style.height = `${(scroll - 1936) / (sectionY.top + section_height + 1936) * 280}%`;
+            line_ver_new.style.backgroundColor = "#c4c4c4";
         }
 
-    if ((scroll - 1936) / (section_height + sectionY.top + 1936) * 200 - 200 >= -220 && (scroll - 1936) / (section_height + sectionY.top + 1936) * 200 - 200 <= -52)
-        text_old_hermitage.style.transform = `translateY(${(scroll - 1936) / (section_height + sectionY.top + 1936) * -200 + 200}px)`; // текст OLD HERMITAGE двигается вверх
+//--------OLD HERMITAGE--------//
+    if ((scroll - 1936) / (section_height + sectionY.top + 1936) * 200 - 200 >= -200 && (scroll - 1936) / (section_height + sectionY.top + 1936) * 200 - 200 <= 0)
+        {
+            // надпись OLD HERMITAGE двигается вниз
+            title_old_hermitage.style.transform = `translateY(${(scroll - 1936) / (section_height + sectionY.top + 1936) * 200 - 200}px)`;
+
+            // горизонтальная линия OLD HERMITAGE двигается влево
+            line_hor_old.style.width = `${(scroll - 1936) / (sectionY.top + section_height + 1936) * 100.05}%`;
+
+            // текст OLD HERMITAGE двигается вверх
+            text_old_hermitage.style.transform = `translateY(${(scroll - 1936) / (section_height + sectionY.top + 1936) * -200 + 190}px)`;
+
+            line_ver_old.style.backgroundColor = "#151515";
+        }
 
     // вертикальная линия OLD HERMITAGE двигается вниз
-    // if (scroll >= 2904 && scroll <= 3546)
-    //     {
-    //         line_ver_old.style.height = `${(scroll - 2904) / (sectionY.top + section_height + 1936) * 100}%`;
-    //         line_ver_old.style.backgroundColor = "#c4c4c4";
+    if ((scroll - 1936) / (section_height + sectionY.top + 1936) * 200 - 200 >= 0 && (scroll - 2904) / (section_height + sectionY.top + 2904) * 200 - 200 <= -100)
+        {
+            line_ver_old.style.height = `${(scroll - 2904) / (sectionY.top + section_height + 2904) * 423}%`;
+            line_ver_old.style.backgroundColor = "#c4c4c4";
 
-    //         line_comp.style.borderBottomColor = "#151515";
-    //     }
+            line_comp.style.borderBottomColor = "#151515";
+        }
 
     // горизонтальная линия ABOUT US двигается влево
-    // if (scroll >= 3546)
-    //     {
-    //         line_comp.style.width = `${(scroll - 3546) / (sectionY.top + section_height + 3546) * 3400}px`;
-    //         line_comp.style.borderBottomColor = "#c4c4c4";
-    //     }
+    if ((scroll - 2904) / (section_height + sectionY.top + 2904) * 200 - 200 >= -100)
+        {
+            line_comp.style.width = `${(scroll - 3546) / (sectionY.top + section_height + 3546) * 3400}px`;
+            line_comp.style.borderBottomColor = "#c4c4c4";
+        }
         
     // изменение цвета меню в зависимости от фонового цвета
     if (scroll >= 345)
@@ -193,6 +202,7 @@ window.addEventListener('scroll', () => {
             hermitage_uu .style.color = "#151515";
             hermitage_mmm.style.color = "#151515";
             hermitage_dot.style.color = "#151515";
+
             // input_search.style.setProperty("--color_border", "#151515");
             // btn_search.style.setProperty("--color_border", "#151515");
         }

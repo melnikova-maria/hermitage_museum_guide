@@ -382,7 +382,7 @@ section img
 .line_hor
     {
         display: flex;
-        width: 0px;
+        width: 0%;
         height: 2%;
         border-top: 1px solid rgb(196, 196, 196);
     }
@@ -393,7 +393,7 @@ section img
         width: 1px;
         height: 0%;
         background-color: rgb(196, 196, 196);
-        top: 9px;
+        top: 7px;
         right: 0px;
     }
 
@@ -478,7 +478,7 @@ section img
     {
         position: absolute;
         right: 21%;
-        width: 0px;
+        width: 0%;
         top: 485px;
         height: 1%;
         border-top: 1px solid rgb(196, 196, 196);
@@ -489,9 +489,9 @@ section img
         position: absolute;
         width: 1px;
         height: 0px;
-        left: 8.1%;
+        left: 8.15%;
         background-color: rgb(196, 196, 196);
-        top: 6px;
+        top: 4px;
     }
 
 /***************  секция OLD HERMITAGE  ***************/
@@ -516,7 +516,7 @@ section img
 .line_hor_old
     {
         display: flex;
-        width: 0px;
+        width: 0%;
         height: 2%;
         border-top: 1px solid rgb(196, 196, 196);
     }
@@ -527,7 +527,7 @@ section img
         width: 1px;
         height: 0%;
         background-color: rgb(196, 196, 196);
-        top: 9px;
+        top: 7px;
         right: 0px;
     }
 
