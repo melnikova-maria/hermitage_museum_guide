@@ -51,7 +51,6 @@ While on develop branch:
 - [i.trushkov](https://bmstu.codes/i.trushkov)
 - [mariya.melnikova](https://bmstu.codes/mariya.melnikova.2)
 
-
-
-
-![Logo](/rooms/static/rooms/media/logo.png)
+<div align = "center">
+    <img width = "40%" height = "40%" src = "/rooms/static/rooms/media/logo.png">
+</div>
