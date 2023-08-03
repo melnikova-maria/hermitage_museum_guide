@@ -61,9 +61,6 @@ window.addEventListener('scroll', () => {
     let scroll = window.pageYOffset;
     let sectionY = section.getBoundingClientRect();
 
-    console.log("(scroll - 2904) / (section_height + sectionY.top + 2904) * 200 - 200", (scroll - 2904) / (section_height + sectionY.top + 2904) * 200 - 200);
-    
-
 //--------WINTER PALACE--------//
     if (scroll / (section_height + sectionY.top) * 200 - 200 >= -200 && scroll / (section_height + sectionY.top) * 200 - 200 <= 0)
         {

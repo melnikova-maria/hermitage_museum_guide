@@ -133,7 +133,9 @@ body
         right: 20%;
         left: 20%;
         bottom: 20px;
-        border-bottom: 2px solid #151515;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: var(--color_border);
         transition: 1s;
         transform: scaleX(0);
     }
@@ -187,7 +189,9 @@ body
         right: 15%;
         left: 15%;
         bottom: -5px;
-        border-bottom: 2px solid #151515;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: var(--color_border);
         transition: 1s;
         transform: scaleX(0);
     }
