@@ -48,8 +48,8 @@ While on develop branch:
 
 ## Авторы
 
-- [i.trushkov](https://bmstu.codes/i.trushkov)
-- [mariya.melnikova](https://bmstu.codes/mariya.melnikova.2)
+- [ilyatrushkov](https://github.com/ilyatrushkov)
+- [melnikova.m](https://github.com/melnikova-maria)
 
 <div align = "center">
     <img width = "40%" height = "40%" src = "/rooms/static/rooms/media/logo.png">
